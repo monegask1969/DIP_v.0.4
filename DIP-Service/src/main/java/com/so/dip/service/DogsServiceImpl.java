@@ -7,7 +7,6 @@ package com.so.dip.service;
 
 import com.so.dip.domain.Dogs;
 import com.so.dip.domain.DogsDAO;
-import com.so.springwebapp.domain.UsersDAO;
 import java.util.Date;
 import java.util.List;
 import org.hibernate.HibernateException;
@@ -33,12 +32,6 @@ public class DogsServiceImpl implements DogsService{
         }catch(ODEException ex){
             System.out.println("write log - dog does not exist");
             throw ex;
-        }catch(HibernateException ex){
-            System.out.println("hibernate exception occured");
-            throw ex;
-        }catch(Exception ex){
-            System.out.println((ex.getClass()).getName()+ " exception occured");
-            throw ex;
         }
         return d;
     }
@@ -53,12 +46,6 @@ public class DogsServiceImpl implements DogsService{
             }
         }catch(ODEException ex){
             System.out.println("write log - dog does not exist");
-            throw ex;
-        }catch(HibernateException ex){
-            System.out.println("hibernate exception occured");
-            throw ex;
-        }catch(Exception ex){
-            System.out.println((ex.getClass()).getName()+ " exception occured");
             throw ex;
         }
         return d;
@@ -75,12 +62,6 @@ public class DogsServiceImpl implements DogsService{
         }catch(ODEException ex){
             System.out.println("write log - dog does not exist");
             throw ex;
-        }catch(HibernateException ex){
-            System.out.println("hibernate exception occured");
-            throw ex;
-        }catch(Exception ex){
-            System.out.println((ex.getClass()).getName()+ " exception occured");
-            throw ex;
         }
         return d;
     }
@@ -95,12 +76,6 @@ public class DogsServiceImpl implements DogsService{
             }
         }catch(ODEException ex){
             System.out.println("write log - dog does not exist");
-            throw ex;
-        }catch(HibernateException ex){
-            System.out.println("hibernate exception occured");
-            throw ex;
-        }catch(Exception ex){
-            System.out.println((ex.getClass()).getName()+ " exception occured");
             throw ex;
         }
         return d;
@@ -117,12 +92,6 @@ public class DogsServiceImpl implements DogsService{
         }catch(ODEException ex){
             System.out.println("write log - dog does not exist");
             throw ex;
-        }catch(HibernateException ex){
-            System.out.println("hibernate exception occured");
-            throw ex;
-        }catch(Exception ex){
-            System.out.println((ex.getClass()).getName()+ " exception occured");
-            throw ex;
         }
         return d;
     }
@@ -137,12 +106,6 @@ public class DogsServiceImpl implements DogsService{
             }
         }catch(ODEException ex){
             System.out.println("write log - dog does not exist");
-            throw ex;
-        }catch(HibernateException ex){
-            System.out.println("hibernate exception occured");
-            throw ex;
-        }catch(Exception ex){
-            System.out.println((ex.getClass()).getName()+ " exception occured");
             throw ex;
         }
         return d;
@@ -159,12 +122,6 @@ public class DogsServiceImpl implements DogsService{
         }catch(ODEException ex){
             System.out.println("write log - dog does not exist");
             throw ex;
-        }catch(HibernateException ex){
-            System.out.println("hibernate exception occured");
-            throw ex;
-        }catch(Exception ex){
-            System.out.println((ex.getClass()).getName()+ " exception occured");
-            throw ex;
         }
         return d;
     }
@@ -179,12 +136,6 @@ public class DogsServiceImpl implements DogsService{
             }
         }catch(ODEException ex){
             System.out.println("write log - dog does not exist");
-            throw ex;
-        }catch(HibernateException ex){
-            System.out.println("hibernate exception occured");
-            throw ex;
-        }catch(Exception ex){
-            System.out.println((ex.getClass()).getName()+ " exception occured");
             throw ex;
         }
         return d;
@@ -201,12 +152,6 @@ public class DogsServiceImpl implements DogsService{
         }catch(ODEException ex){
             System.out.println("write log - dog does not exist");
             throw ex;
-        }catch(HibernateException ex){
-            System.out.println("hibernate exception occured");
-            throw ex;
-        }catch(Exception ex){
-            System.out.println((ex.getClass()).getName()+ " exception occured");
-            throw ex;
         }
         return d;
     }
@@ -221,12 +166,6 @@ public class DogsServiceImpl implements DogsService{
             }
         }catch(ODEException ex){
             System.out.println("write log - dog does not exist");
-            throw ex;
-        }catch(HibernateException ex){
-            System.out.println("hibernate exception occured");
-            throw ex;
-        }catch(Exception ex){
-            System.out.println((ex.getClass()).getName()+ " exception occured");
             throw ex;
         }
         return d;
@@ -243,12 +182,6 @@ public class DogsServiceImpl implements DogsService{
         }catch(ODEException ex){
             System.out.println("write log - dog does not exist");
             throw ex;
-        }catch(HibernateException ex){
-            System.out.println("hibernate exception occured");
-            throw ex;
-        }catch(Exception ex){
-            System.out.println((ex.getClass()).getName()+ " exception occured");
-            throw ex;
         }
         return d;
     }
@@ -263,12 +196,6 @@ public class DogsServiceImpl implements DogsService{
             }
         }catch(ODEException ex){
             System.out.println("write log - dog does not exist");
-            throw ex;
-        }catch(HibernateException ex){
-            System.out.println("hibernate exception occured");
-            throw ex;
-        }catch(Exception ex){
-            System.out.println((ex.getClass()).getName()+ " exception occured");
             throw ex;
         }
         return d;

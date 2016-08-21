@@ -1,9 +1,8 @@
 package com.so.dip.web;
 
-import com.so.springwebapp.domain.Users;
 import com.so.dip.domain.Dogs;
-import com.so.dip.
-import com.so.springwebapp.service.UsersService;
+import com.so.dip.service.DogsService;
+
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -27,15 +26,15 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class DogController {
     @Autowired
-    DogsService
+    private DogsService dogsService;
     
     
-    @RequestMapping(value = {"/","/users"}, method = {RequestMethod.GET})
+    @RequestMapping(value = {"/","/dogs"}, method = {RequestMethod.GET})
     public ModelAndView getUsersList(){
         ModelAndView mv = new ModelAndView();
-        List<Users> uList = usersService.getList();
-        mv.setViewName("users/users");
-        mv.addObject("users", uList);
+        List<Dogs> dList = dogsService.getList();
+        mv.setViewName("dogs/home_page");
+        mv.addObject("dogs", dList);
         return mv;
     }
      
@@ -43,20 +42,20 @@ public class DogController {
     public ModelAndView getUserById(
             @PathVariable("id")int id){
         ModelAndView mv = new ModelAndView();
-        Users user = usersService.getById(id);
-        mv.setViewName("users/editUser");
-        mv.addObject("user", user);
+        Dogs dog = dogsService.getById(id);
+        mv.setViewName("dogs/home_page");
+        mv.addObject("dog", dog);
         return mv;
     }
     
-    @RequestMapping(value = {"/users/{id}"}, method = {RequestMethod.POST})
+    @RequestMapping(value = {"/dogs/{id}"}, method = {RequestMethod.POST})
     public String updateUser(
             @PathVariable("id")int id,
             @RequestParam(name = "firstname")String firstname,
             @RequestParam(name = "lastname")String lastname,
             @RequestParam(name = "email")String email,
             @RequestParam(name = "phone")String phone){
-        Users user = usersService.getById(id);
+        Dogs dog = dogsService.getById(id);
 //        user.setFirstname(firstname);
 //        user.setLastname(lastname);
 //        user.setEmail(email);

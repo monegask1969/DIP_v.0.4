@@ -5,7 +5,7 @@
  */
 package com.so.dip.service;
 
-import com.so.springwebapp.domain.Users;
+import com.so.dip.domain.Users;
 import java.util.List;
 
 /**

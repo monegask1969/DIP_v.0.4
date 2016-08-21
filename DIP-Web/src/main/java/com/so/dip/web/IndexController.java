@@ -1,7 +1,7 @@
 package com.so.dip.web;
 
-import com.so.dip.domain.Dogs;
-import com.so.dip.;
+import com.so.dip.domain.Users;
+import com.so.dip.service.UsersService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -25,7 +25,7 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class IndexController {
     @Autowired
-    DogsService
+    UsersService usersService;
     
     
     @RequestMapping(value = {"/","/users"}, method = {RequestMethod.GET})
@@ -36,7 +36,7 @@ public class IndexController {
         mv.addObject("users", uList);
         return mv;
     }
-     
+    
     @RequestMapping(value = {"/users/{id}"}, method = {RequestMethod.GET})
     public ModelAndView getUserById(
             @PathVariable("id")int id){

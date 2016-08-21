@@ -5,21 +5,18 @@
  */
 package com.so.dip.service;
 
-import com.so.dip.domain.Users;
 import com.so.dip.domain.UsersDAO;
-//import com.so.springwebapp.domain.UsersDAOImpl;
+import com.so.dip.domain.Users;
 import java.util.List;
 import org.hibernate.HibernateException;
 import org.springframework.beans.factory.annotation.Autowired;
-//import org.springframework.beans.factory.annotation.Autowired;
-//import org.springframework.beans.factory.annotation.Required;
 
 /**
  *
- * @author stan
+ * @author moneg
  */
 public class UsersServiceImpl implements UsersService{
-@Autowired
+ @Autowired
     private UsersDAO usersDao;
 
 //    @Required
@@ -29,10 +26,11 @@ public class UsersServiceImpl implements UsersService{
 
     public UsersServiceImpl() {
 //        usersDao = new UsersDAOImpl();
-    } 
+    }
+    
     @Override
-    public com.so.springwebapp.domain.Users getById(int id) {
-        com.so.springwebapp.domain.Users u = null;
+    public Users getById(int id) {
+        Users u = null;
         try{
             u = usersDao.getById(id);
             if(u == null){
@@ -41,18 +39,12 @@ public class UsersServiceImpl implements UsersService{
         }catch(ODEException ex){
             System.out.println("write log - user does not exist");
             throw ex;
-        }catch(HibernateException ex){
-            System.out.println("hibernate exception occured");
-            throw ex;
-        }catch(Exception ex){
-            System.out.println((ex.getClass()).getName()+ " exception occured");
-            throw ex;
         }
         return u;
     }
 
     @Override
-    public List<com.so.springwebapp.domain.Users> getList() {
+    public List<Users> getList() {
         List<Users> u = null;
         try{
             u = usersDao.getList();
@@ -66,7 +58,7 @@ public class UsersServiceImpl implements UsersService{
     }
 
     @Override
-    public com.so.springwebapp.domain.Users loadByUsername(String login) {
+    public Users loadByUsername(String login) {
         Users u = null;
         try{
             u = usersDao.findByUsername(login);
@@ -76,15 +68,9 @@ public class UsersServiceImpl implements UsersService{
         }catch(ODEException ex){
             System.out.println("write log - user does not exist");
             throw ex;
-        }catch(HibernateException ex){
-            System.out.println("hibernate exception occured");
-            throw ex;
-        }catch(Exception ex){
-            System.out.println((ex.getClass()).getName()+ " exception occured");
-            throw ex;
         }
         return u;
-    }  
- 
+    }   
+    
     
 }
