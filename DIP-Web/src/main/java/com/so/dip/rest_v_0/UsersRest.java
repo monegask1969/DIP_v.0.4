@@ -5,8 +5,8 @@
  */
 package com.so.dip.rest_v_0;
 
-import com.so.springwebapp.domain.Users;
-import com.so.springwebapp.service.UsersService;
+import com.so.dip.domain.Users;
+import com.so.dip.service.UsersService;
 import java.util.List;
 import org.json.JSONArray;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,9 +33,9 @@ public class UsersRest {
     public String getUsersList(){
         List<Users> users = usersService.getList();
         JSONArray arr = new JSONArray();
-        for(Users u : users){
-            arr.put(u.getJsonObject());
-        }
+//        for(Users u : users){
+//            arr.put(u.getJsonObject());
+//        }
         return arr.toString();
     }
     

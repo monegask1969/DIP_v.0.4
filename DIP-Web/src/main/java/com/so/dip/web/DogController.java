@@ -34,11 +34,11 @@ public class DogController {
         ModelAndView mv = new ModelAndView();
         List<Dogs> dList = dogsService.getList();
         mv.setViewName("dogs/home_page");
-        mv.addObject("dogs", dList);
+        mv.addObject("dogs/dogs", dList);
         return mv;
     }
      
-    @RequestMapping(value = {"/users/{id}"}, method = {RequestMethod.GET})
+    @RequestMapping(value = {"/dogs/{id}"}, method = {RequestMethod.GET})
     public ModelAndView getUserById(
             @PathVariable("id")int id){
         ModelAndView mv = new ModelAndView();
@@ -64,16 +64,16 @@ public class DogController {
 //        usersService.updateUser(user);
         return "redirect:/users";
     }
-    @RequestMapping(value = {"/users/{id}"}, method = {RequestMethod.DELETE})
+    @RequestMapping(value = {"/dogs/{id}"}, method = {RequestMethod.DELETE})
     @ResponseBody
     public void deleteUser(
             @PathVariable("id")int id){
         System.out.println("userid = " + id);
     }
     
-    @RequestMapping(value = {"/admin"}, method = {RequestMethod.GET})
-    public String admin(){
-        return "admin/admin";
-    }
+//    @RequestMapping(value = {"/admin"}, method = {RequestMethod.GET})
+//    public String admin(){
+//        return "admin/admin";
+//    }
     
 }

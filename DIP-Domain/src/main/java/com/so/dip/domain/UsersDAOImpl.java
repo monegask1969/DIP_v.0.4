@@ -40,9 +40,9 @@ public class UsersDAOImpl implements UsersDAO{
     @Override
     public Users findByUsername(String username) {
         Session session = HibernateUtil.getSessionFactory().openSession();
+        System.out.println(" session : " + session);
         Users user = (Users)session.createCriteria(Users.class)
                 .add(Restrictions.eq("login", username)).uniqueResult();
-        System.out.println("user- " + user);
         session.close();
         return user;
     }

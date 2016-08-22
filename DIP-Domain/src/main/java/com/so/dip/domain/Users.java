@@ -6,6 +6,8 @@
 package com.so.dip.domain;
 
 import java.io.Serializable;
+import java.util.Arrays;
+import java.util.Collection;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -16,6 +18,8 @@ import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 import javax.xml.bind.annotation.XmlRootElement;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
 
 /**
  *
@@ -34,7 +38,7 @@ import javax.xml.bind.annotation.XmlRootElement;
     @NamedQuery(name = "Users.findByPassword", query = "SELECT u FROM Users u WHERE u.password = :password"),
     @NamedQuery(name = "Users.findByPhone", query = "SELECT u FROM Users u WHERE u.phone = :phone"),
     @NamedQuery(name = "Users.findByRolename", query = "SELECT u FROM Users u WHERE u.rolename = :rolename")})
-public class Users implements Serializable {
+public class Users implements Serializable, UserDetails, GrantedAuthority {
 
     private static final long serialVersionUID = 1L;
     @Id
@@ -169,6 +173,42 @@ public class Users implements Serializable {
     @Override
     public String toString() {
         return "com.so.dip.domain.Users[ id=" + id + " ]";
+    }
+
+    @Override
+    public Collection<? extends GrantedAuthority> getAuthorities() {
+        return Arrays.asList(new GrantedAuthority[]{this});
+    }
+
+
+    @Override
+    public String getUsername() {
+        return this.login;
+    }
+
+    @Override
+    public boolean isAccountNonExpired() {
+        return true;
+    }
+
+    @Override
+    public boolean isAccountNonLocked() {
+        return true;
+    }
+
+    @Override
+    public boolean isCredentialsNonExpired() {
+        return true;
+    }
+
+    @Override
+    public boolean isEnabled() {
+         return true;
+    }
+
+    @Override
+    public String getAuthority() {
+        return rolename;
     }
     
 }

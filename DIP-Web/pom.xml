@@ -2,8 +2,8 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-    <artifactId>SpringWebApp</artifactId>
-    <groupId>com.so</groupId>
+    <artifactId>DIP_v.04</artifactId>
+    <groupId>com.so.dip</groupId>
     <version>1.0-SNAPSHOT</version>
   </parent>
 
@@ -44,8 +44,8 @@
             <version>4.3.1.RELEASE</version>
         </dependency>
         <dependency>
-            <groupId>com.so</groupId>
-            <artifactId>SpringWebApp-Service</artifactId>
+            <groupId>com.so.dip</groupId>
+            <artifactId>DIP-Service</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
         <dependency>
