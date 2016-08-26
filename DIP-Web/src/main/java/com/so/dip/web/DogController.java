@@ -33,8 +33,8 @@ public class DogController {
     public ModelAndView getUsersList(){
         ModelAndView mv = new ModelAndView();
         List<Dogs> dList = dogsService.getList();
-        mv.setViewName("dogs/home_page");
-        mv.addObject("dogs/dogs", dList);
+        mv.setViewName("dogs/dogs_table");
+        mv.addObject("dogs/dogs_table", dList);
         return mv;
     }
      
@@ -43,7 +43,7 @@ public class DogController {
             @PathVariable("id")int id){
         ModelAndView mv = new ModelAndView();
         Dogs dog = dogsService.getById(id);
-        mv.setViewName("dogs/home_page");
+        mv.setViewName("dogs/dogs_table");
         mv.addObject("dog", dog);
         return mv;
     }
@@ -51,10 +51,11 @@ public class DogController {
     @RequestMapping(value = {"/dogs/{id}"}, method = {RequestMethod.POST})
     public String updateUser(
             @PathVariable("id")int id,
-            @RequestParam(name = "firstname")String firstname,
-            @RequestParam(name = "lastname")String lastname,
-            @RequestParam(name = "email")String email,
-            @RequestParam(name = "phone")String phone){
+            @RequestParam(name = "FCI_group")String firstname,
+            @RequestParam(name = "breed")String breed,
+            @RequestParam(name = "gender")String gender,
+            @RequestParam(name = "name")String name)
+    {
         Dogs dog = dogsService.getById(id);
 //        user.setFirstname(firstname);
 //        user.setLastname(lastname);
@@ -62,7 +63,7 @@ public class DogController {
 //        user.setPhone(phone);
         System.out.println(firstname);
 //        usersService.updateUser(user);
-        return "redirect:/users";
+        return "redirect:/dogs";
     }
     @RequestMapping(value = {"/dogs/{id}"}, method = {RequestMethod.DELETE})
     @ResponseBody

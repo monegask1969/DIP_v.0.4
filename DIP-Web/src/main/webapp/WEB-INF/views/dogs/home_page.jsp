@@ -1,15 +1,9 @@
-<%-- 
-    Document   : home_page
-    Created on : 18.07.2016, 21:46:55
-    Author     : moneg
---%>
-
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <link rel="icon" type="image/x-icon" href="favicon.ico" />
 <link rel="shortcut icon"  href="favicon.ico" type="image/x-icon"  />
-<title>Dogs In Pocket</title>
+<title>WebSplash - Slider</title>
 <meta name="keywords" content=""/>
 <meta name="description" content="" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -44,7 +38,7 @@
 		<div class="inner">
 			<div class="section_top">
 				<div class="block_top_text">
-					<p>Dogs In Pocket - keep Your dogs close</p>
+					<p>DIP - Dogs In Pocket</p>
 				</div>
 				<div class="block_search">
 					<div id="search_show" class="button">Search</div>
@@ -68,60 +62,12 @@
 			</div>
 			<div class="section_bottom">
 				<div id="title_top">
-					<p><a href="homepage"><img src="layout/images/title.png" alt="Dogs In Pocket" title="Dogs In Pocket" /></a></p>
+					<p><a href="home.html"><img src="layout/images/spacer.gif" alt="WebSplash" title="WebSplash" /></a></p>
 				</div>
 				<div id="main_menu">
 					<ul>
-						<li class="active"><a href="homepage">Home</a></li>
-						<li><a href="DogsView">Dogs</a></li>
-						<li><a href="additional_elements.html">Features</a>
-							<ul>
-								<li><a href="pricing_table.html">Pricing table</a></li>
-								<li><a href="additional_elements.html">Additional elements</a></li>
-								<li><a href="columns.html">Columns</a></li>
-								<li><a href="services.html">Services</a></li>
-								<li><a href="archives.html">Archives</a></li>
-								<li><a href="404.html">Page 404</a></li>
-							</ul>
-						</li>
-						<li><a href="portfolio_2c.html">Portfolio</a>
-							<ul>
-								<li><a href="portfolio_2c.html">Portfolio 2 columns</a></li>
-								<li><a href="portfolio_3c.html">Portfolio 3 columns</a></li>
-								<li><a href="portfolio_4c.html">Portfolio 4 columns</a></li>
-								<li><a href="portfolio_with_sidebar_2c.html">Portfolio With Right Sidebar</a>
-									<ul>
-										<li><a href="portfolio_with_sidebar_2c.html">2 Columns Right Sidebar</a></li>
-										<li><a href="portfolio_with_sidebar_3c.html">3 Columns Right Sidebar</a></li>
-									</ul>
-								</li>
-								<li><a href="portfolio_with_link_2c.html">Portfolio With Link Button</a>
-									<ul>
-										<li><a href="portfolio_with_link_2c.html">2 Columns With Link Button</a></li>
-										<li><a href="portfolio_with_link_3c.html">3 Columns With Link Button</a></li>
-										<li><a href="portfolio_with_link_4c.html">4 Columns With Link Button</a></li>
-									</ul>
-								</li>
-								<li><a href="portfolio_gallery.html">Portfolio Gallery Style </a>
-									<ul>
-										<li><a href="portfolio_gallery.html">Gallery With Right Sidebar</a></li>
-										<li><a href="portfolio_gallery_full.html">Galley Full Width</a></li>
-									</ul>
-								</li>
-								<li><a href="portfolio_item.html">Portfolio Item Page</a></li>
-							</ul>
-						</li>
-						<li><a href="blog_1.html">Blog</a>
-							<ul>
-								<li><a href="blog_1.html">Blog Style 1</a></li>
-								<li><a href="blog_2.html">Blog Style 2</a></li>
-								<li><a href="blog_right_1.html">Blog Style 3</a></li>
-								<li><a href="blog_right_2.html">Blog Style 4</a></li>
-								<li><a href="blog_right_3.html">Blog Style 5</a></li>
-								<li><a href="blog_full_width.html">Blog full width</a></li>
-								<li><a href="blog_post.html">Blog post page</a></li>
-							</ul>
-						</li>
+						<li class="active"><a href="home.html">Home</a></li>
+                                                <li><a href="slider_accordion.html">Dog's Table</a></li>
 						<li><a href="about.html">About</a></li>
 						<li><a href="contact.php">Contact</a></li>
 					</ul>
@@ -140,57 +86,56 @@
 					<div class="slider_wrapper">
 						<ul id="slider" class="slider_cont">
 							<li>
-								<div class="slider_thumbs"><img src="images/test_folder/first_group.jpg" alt="" /></div>
-								<div class="slider_preview"><img src="images/test_folder/first_group.jpg" alt="" /></div>
-								<div class="slider_title">23.04.2016. FCI - CACIB "ЗОЛОТЫЕ ВОРОТА - 2016" </div>
+								<div class="slider_thumbs"><img src="images/78x46/pic_78x46_1.jpg" alt="" /></div>
+								<div class="slider_preview"><img src="images/929x295/pic_929x295_1.jpg" alt="" /></div>
+								<div class="slider_title">labore et dolore magnam</div>
 								<div class="slider_details">
-									I группа
+									Tempora incidunt ut labore et dolore magnam...
 									<a href="#"><img src="layout/images/arrow-white.png" alt="" /></a>
 								</div>
 							</li>
 							<li>
-								<div class="slider_thumbs"><img src="images/test_folder/5_group.jpg" alt="" /></div>
-								<div class="slider_preview"><img src="images/test_folder/5_group.jpg" alt="" /></div>
-								<div class="slider_title">2xFCI-CACIB 05-06.12.2015. Киев</div>
+								<div class="slider_thumbs"><img src="images/78x46/pic_78x46_7.jpg" alt="" /></div>
+								<div class="slider_preview"><img src="images/929x295/pic_929x295_7.jpg" alt="" /></div>
+								<div class="slider_title">labore et dolore magnam</div>
 								<div class="slider_details">
-									V группа
+									Tempora incidunt ut labore et dolore magnam...
 									<a href="#"><img src="layout/images/arrow-white.png" alt="" /></a>
 								</div>
 							</li>
 							<li>
-								<div class="slider_thumbs"><img src="images/test_folder/3_group.jpg" alt="" /></div>
-								<div class="slider_preview"><img src="images/test_folder/3_group.jpg" alt="" /></div>
-								<div class="slider_title">28.08.2015 "ЗОЛОТАЯ ПЕКТОРАЛЬ - 2015"</div>
+								<div class="slider_thumbs"><img src="images/78x46/pic_78x46_3.jpg" alt="" /></div>
+								<div class="slider_preview"><img src="images/929x295/pic_929x295_3.jpg" alt="" /></div>
+								<div class="slider_title">labore et dolore magnam</div>
 								<div class="slider_details">
-									III группа
-									<a href="#"><img src="layout/images/arrow-white.png" alt="" /></a>
-								</div>
-							</li>
-                                                    <!--CHANGE PICS-->
-							<li>
-								<div class="slider_thumbs"><img src="images/test_folder/first_group.jpg" alt="" /></div>
-								<div class="slider_preview"><img src="images/test_folder/first_group.jpg" alt="" /></div>
-								<div class="slider_title">23.04.2016. FCI - CACIB "ЗОЛОТЫЕ ВОРОТА - 2016" </div>
-								<div class="slider_details">
-									I группа
+									Tempora incidunt ut labore et dolore magnam...
 									<a href="#"><img src="layout/images/arrow-white.png" alt="" /></a>
 								</div>
 							</li>
 							<li>
-								<div class="slider_thumbs"><img src="images/test_folder/5_group.jpg" alt="" /></div>
-								<div class="slider_preview"><img src="images/test_folder/5_group.jpg" alt="" /></div>
-								<div class="slider_title">2xFCI-CACIB 05-06.12.2015. Киев</div>
+								<div class="slider_thumbs"><img src="images/78x46/pic_78x46_4.jpg" alt="" /></div>
+								<div class="slider_preview"><img src="images/929x295/pic_929x295_4.jpg" alt="" /></div>
+								<div class="slider_title">labore et dolore magnam</div>
 								<div class="slider_details">
-									V группа
+									Tempora incidunt ut labore et dolore magnam...
 									<a href="#"><img src="layout/images/arrow-white.png" alt="" /></a>
 								</div>
 							</li>
 							<li>
-								<div class="slider_thumbs"><img src="images/test_folder/3_group.jpg" alt="" /></div>
-								<div class="slider_preview"><img src="images/test_folder/3_group.jpg" alt="" /></div>
-								<div class="slider_title">28.08.2015 "ЗОЛОТАЯ ПЕКТОРАЛЬ - 2015"</div>
+								<div class="slider_thumbs"><img src="images/78x46/pic_78x46_5.jpg" alt="" /></div>
+								<div class="slider_preview"><img src="images/929x295/pic_929x295_5.jpg" alt="" /></div>
+								<div class="slider_title">labore et dolore magnam</div>
 								<div class="slider_details">
-									III группа
+									Tempora incidunt ut labore et dolore magnam...
+									<a href="#"><img src="layout/images/arrow-white.png" alt="" /></a>
+								</div>
+							</li>
+							<li>
+								<div class="slider_thumbs"><img src="images/78x46/pic_78x46_6.jpg" alt="" /></div>
+								<div class="slider_preview"><img src="images/929x295/pic_929x295_6.jpg" alt="" /></div>
+								<div class="slider_title">labore et dolore magnam</div>
+								<div class="slider_details">
+									Tempora incidunt ut labore et dolore magnam...
 									<a href="#"><img src="layout/images/arrow-white.png" alt="" /></a>
 								</div>
 							</li>
@@ -201,8 +146,7 @@
 			<div class="line_1"></div>
 			<div class="separator_2"></div>
 			<div class="block_slogan">
-				<p>Welcome to <span>Dogs In Pocket</span>!</p>
-				<p>Here You could find information about Dog Shows, Dogs, Experts, etc.</p>
+				<p>Dogs In Pocket - keep Your dog in Your pocket!</p>
 			</div>
 			<div class="separator_2"></div>
 			<div class="line_1"></div>
@@ -211,7 +155,8 @@
 			<div class="block_two_columns">
 				<div class="column_1 fl">
 					<h2>What we do</h2>
-					<p>We give some information in comfort way, to summary Your knowledge about Dog Shows and everything about dogs.</p>
+					<p>Give Your an information about dog You're interesting about.</p>
+					<p class="text_w_space"><a href="#" class="lnk_w_arrow_general">Read more</a></p>   <!--???????? ?????? ?? ????? ?????? ? ????-->
 				</div>
 				<div class="column_2 separated_border_left fr">
 					<div class="block_three_columns_type_3">
@@ -219,9 +164,9 @@
 							<div class="block_services">
 								<div class="pic"><img src="images/icons/icon_display.png" alt="" /></div>
 								<h3>Established fact that.</h3>
-								<h4>Everything in Your pocket.</h4>
+								<h4>Long established that a reader.</h4>
 								<div class="cl"></div>
-								<p>This service is available in every device.</p>
+								<p>Long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that. Has a more-or-less normal.</p>
 							</div>
 						</div>
 						<div class="column_narrow">
@@ -229,19 +174,19 @@
 								<div class="pic">
 									<div class="separator_7"></div>
 									<img src="images/icons/icon_earth.png" alt="" /></div>
-								<h3>Dog Shows in Ukraine</h3>
-								<h4>Every Dog Show find here.</h4>
+								<h3>Readable content</h3>
+								<h4>Variations of passages available.</h4>
 								<div class="cl"></div>
-								<p>There are many Dog Shows, which You could find here!</p>
+								<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which.</p>
 							</div>
 						</div>
 						<div class="column_narrow">
 							<div class="block_services">
 								<div class="pic"><img src="images/icons/icon_desk.png" alt="" /></div>
-								<h3>United information</h3>
-								<h4>Every dog is included.</h4>
+								<h3>Variations of passages</h3>
+								<h4>Majority have suffered.</h4>
 								<div class="cl"></div>
-								<p>All information here is shown in table view. You could save everthing what You are interesting .</p>
+								<p>Established fact that a reader will be distracted by the readable content page when looking at its There are many variations of passages of Lorem Ipsum available.</p>
 							</div>
 						</div>
 					</div>
@@ -249,13 +194,120 @@
 			</div>
 			<div class="separator_1"></div>
 			<div class="line_1"></div>
+			<div class="separator_1"></div>
+			<div class="block_two_columns">
+				<div class="column_1 fl">
+					<h2>Recent Projects</h2>
+					<p>Variations of passages of Lorem Ipsum available, but the majority suffered alteration in some form, by injected humour, or randomised.</p>
+					<p class="text_w_space"><a href="#" class="lnk_w_arrow_general">View all projects</a></p>
+				</div>
+				<div class="column_2_2 separated_border_left_18 fr">
+					<div class="block_recent_projects">
+						<div id="recent_projects_pager"></div>
+						<div class="block_filter">
+							<ul>
+								<li><a href="javascript:void(0)" title="all">All Categories</a></li>
+								<li><a href="javascript:void(0)" title="webdesign">Web Design</a></li>
+								<li><a href="javascript:void(0)" title="photography">Photography</a></li>
+								<li><a href="javascript:void(0)" title="branding">Branding</a></li>
+								<li><a href="javascript:void(0)" title="video">Video</a></li>
+							</ul>
+						</div>
+						<div class="block_three_columns_type_2 items_carousel_1" id="block_filtered_items"> 
+							<!-- 1 -->
+							<div class="block_general_pic_w_desc filtering_item webdesign">
+								<div class="pic_wrapper"> <span class="block_general_pic"> <a href="images/900x600/preview_13.jpg" class="hover_1" rel="prettyPhoto[gallery_rec]" title="Long established fact that a reader"> <img src="images/204x125/pic_home_1.jpg" class="r_conner_pic" alt="" /> <span class="block_hover">&nbsp;</span> </a> </span> </div>
+								<h3><a href="#">Image title</a></h3>
+								<p class="description">Long established fact that a reader will be distracted by the readable... <a href="#" class="arr_d"><img src="layout/images/arrow_1.gif" alt="" /></a></p>
+							</div>
+							<div class="block_general_pic_w_desc filtering_item photography">
+								<div class="pic_wrapper"> <span class="block_general_pic"> <a href="images/900x600/preview_12.jpg" class="hover_1" rel="prettyPhoto[gallery_rec]" title="Long established fact that a reader"> <img src="images/204x125/pic_home_2.jpg" class="r_conner_pic" alt="" /> <span class="block_hover">&nbsp;</span> </a> </span> </div>
+								<h3><a href="#">Image title</a></h3>
+								<p class="description">Long established fact that a reader will be distracted by the readable... <a href="#" class="arr_d"><img src="layout/images/arrow_1.gif" alt="" /></a></p>
+							</div>
+							<div class="block_general_pic_w_desc filtering_item video">
+								<div class="pic_wrapper"> <span class="block_general_pic"> <a href="http://youtu.be/08DMQ0SV6tM" class="hover_1" rel="prettyPhoto[gallery_rec]" title="Youtube Video"> <img src="images/204x125/pic_home_3.jpg" class="r_conner_pic" alt="" /> <span class="block_hover">&nbsp;</span> </a> </span> </div>
+								<h3><a href="#">Image title</a></h3>
+								<p class="description">Long established fact that a reader will be distracted by the readable... <a href="#" class="arr_d"><img src="layout/images/arrow_1.gif" alt="" /></a></p>
+							</div>
+							
+							<!-- 2 -->
+							<div class="block_general_pic_w_desc filtering_item branding">
+								<div class="pic_wrapper"> <span class="block_general_pic"> <a href="images/900x600/preview_24.jpg"  rel="prettyPhoto[gallery_rec]" title="Long established fact that a reader" class="hover_1"> <img src="images/204x125/pic_home_4.jpg" class="r_conner_pic" alt="" /> <span class="block_hover">&nbsp;</span> </a> </span> </div>
+								<h3><a href="#">Image title</a></h3>
+								<p class="description">Long established fact that a reader will be distracted by the readable... <a href="#" class="arr_d"><img src="layout/images/arrow_1.gif" alt="" /></a></p>
+							</div>
+							<div class="block_general_pic_w_desc filtering_item photography">
+								<div class="pic_wrapper"> <span class="block_general_pic"> <a href="images/900x600/preview_4.jpg" rel="prettyPhoto[gallery1]" title="Long established fact that a reader" class="hover_1"> <img src="images/204x125/pic_home_5.jpg" class="r_conner_pic" alt="" /> <span class="block_hover">&nbsp;</span> </a> </span> </div>
+								<h3><a href="#">Image title</a></h3>
+								<p class="description">Long established fact that a reader will be distracted by the readable... <a href="#" class="arr_d"><img src="layout/images/arrow_1.gif" alt="" /></a></p>
+							</div>
+							<div class="block_general_pic_w_desc filtering_item photography">
+								<div class="pic_wrapper"> <span class="block_general_pic"> <a href="images/900x600/preview_22.jpg"  rel="prettyPhoto[gallery_rec]" title="Long established fact that a reader" class="hover_1"> <img src="images/204x125/pic_home_6.jpg" class="r_conner_pic" alt="" /> <span class="block_hover">&nbsp;</span> </a> </span> </div>
+								<h3><a href="#">Image title</a></h3>
+								<p class="description">Long established fact that a reader will be distracted by the readable... <a href="#" class="arr_d"><img src="layout/images/arrow_1.gif" alt="" /></a></p>
+							</div>
+							
+							<!-- 3 -->
+							<div class="block_general_pic_w_desc filtering_item webdesign">
+								<div class="pic_wrapper"> <span class="block_general_pic"> <a href="images/900x600/preview_25.jpg" class="hover_1" title="Long established fact that a reader" rel="prettyPhoto[gallery_rec]"> <img src="images/204x125/pic_home_7.jpg" class="r_conner_pic" alt="" /> <span class="block_hover">&nbsp;</span> </a> </span> </div>
+								<h3><a href="#">Image title</a></h3>
+								<p class="description">Long established fact that a reader will be distracted by the readable... <a href="#" class="arr_d"><img src="layout/images/arrow_1.gif" alt="" /></a></p>
+							</div>
+							<div class="block_general_pic_w_desc filtering_item photography">
+								<div class="pic_wrapper"> <span class="block_general_pic"> <a href="images/900x600/preview_1.jpg" class="hover_1" title="Long established fact that a reader" rel="prettyPhoto[gallery_rec]"> <img src="images/204x125/pic_home_8.jpg" class="r_conner_pic" alt="" /> <span class="block_hover">&nbsp;</span> </a> </span> </div>
+								<h3><a href="#">Image title</a></h3>
+								<p class="description">Long established fact that a reader will be distracted by the readable... <a href="#" class="arr_d"><img src="layout/images/arrow_1.gif" alt="" /></a></p>
+							</div>
+							<div class="block_general_pic_w_desc filtering_item webdesign">
+								<div class="pic_wrapper"> <span class="block_general_pic"> <a href="images/900x600/preview_17.jpg" class="hover_1" title="Long established fact that a reader" rel="prettyPhoto[gallery_rec]"> <img src="images/204x125/pic_home_9.jpg" class="r_conner_pic" alt="" /> <span class="block_hover">&nbsp;</span> </a> </span> </div>
+								<h3><a href="#">Image title</a></h3>
+								<p class="description">Long established fact that a reader will be distracted by the readable... <a href="#" class="arr_d"><img src="layout/images/arrow_1.gif" alt="" /></a></p>
+							</div>
+							
+							<!-- 4 -->
+							<div class="block_general_pic_w_desc filtering_item branding">
+								<div class="pic_wrapper"> <span class="block_general_pic"> <a href="images/900x600/preview_26.jpg" class="hover_1" title="Long established fact that a reader" rel="prettyPhoto[gallery_rec]"> <img src="images/204x125/pic_home_10.jpg" class="r_conner_pic" alt="" /> <span class="block_hover">&nbsp;</span> </a> </span> </div>
+								<h3><a href="#">Image title</a></h3>
+								<p class="description">Long established fact that a reader will be distracted by the readable... <a href="#" class="arr_d"><img src="layout/images/arrow_1.gif" alt="" /></a></p>
+							</div>
+							<div class="block_general_pic_w_desc filtering_item branding">
+								<div class="pic_wrapper"> <span class="block_general_pic"> <a href="images/900x600/preview_15.jpg"class="hover_1" title="Long established fact that a reader" rel="prettyPhoto[gallery_rec]"> <img src="images/204x125/pic_home_11.jpg" class="r_conner_pic" alt="" /> <span class="block_hover">&nbsp;</span> </a> </span> </div>
+								<h3><a href="#">Image title</a></h3>
+								<p class="description">Long established fact that a reader will be distracted by the readable... <a href="#" class="arr_d"><img src="layout/images/arrow_1.gif" alt="" /></a></p>
+							</div>
+							<div class="block_general_pic_w_desc filtering_item webdesign">
+								<div class="pic_wrapper"> <span class="block_general_pic"> <a href="images/900x600/preview_23.jpg" class="hover_1" title="Long established fact that a reader" rel="prettyPhoto[gallery_rec]"> <img src="images/204x125/pic_home_12.jpg" class="r_conner_pic" alt="" /> <span class="block_hover">&nbsp;</span> </a> </span> </div>
+								<h3><a href="#">Image title</a></h3>
+								<p class="description">Long established fact that a reader will be distracted by the readable... <a href="#" class="arr_d"><img src="layout/images/arrow_1.gif" alt="" /></a></p>
+							</div>
+							<!-- 5 -->
+							<div class="block_general_pic_w_desc filtering_item video">
+								<div class="pic_wrapper"> <span class="block_general_pic"> <a href="http://youtu.be/Ma8eZjNvf0o" class="hover_1" title="YouTube Video" rel="prettyPhoto[gallery_rec]"> <img src="images/204x125/pic_home_13.jpg" class="r_conner_pic" alt="" /> <span class="block_hover">&nbsp;</span> </a> </span> </div>
+								<h3><a href="#">Image title</a></h3>
+								<p class="description">Long established fact that a reader will be distracted by the readable... <a href="#" class="arr_d"><img src="layout/images/arrow_1.gif" alt="" /></a></p>
+							</div>
+							<div class="block_general_pic_w_desc filtering_item branding">
+								<div class="pic_wrapper"> <span class="block_general_pic"> <a href="images/900x600/preview_19.jpg"class="hover_1" title="Long established fact that a reader" rel="prettyPhoto[gallery_rec]"> <img src="images/204x125/pic_home_14.jpg" class="r_conner_pic" alt="" /> <span class="block_hover">&nbsp;</span> </a> </span> </div>
+								<h3><a href="#">Image title</a></h3>
+								<p class="description">Long established fact that a reader will be distracted by the readable... <a href="#" class="arr_d"><img src="layout/images/arrow_1.gif" alt="" /></a></p>
+							</div>
+							<div class="block_general_pic_w_desc filtering_item video">
+								<div class="pic_wrapper"> <span class="block_general_pic"> <a href="http://vimeo.com/9076474&amp;width=700" class="hover_1" title="Vimeo Video" rel="prettyPhoto[gallery_rec]"> <img src="images/204x125/pic_home_15.jpg" class="r_conner_pic" alt="" /> <span class="block_hover">&nbsp;</span> </a> </span> </div>
+								<h3><a href="#">Image title</a></h3>
+								<p class="description">Long established fact that a reader will be distracted by the readable... <a href="#" class="arr_d"><img src="layout/images/arrow_1.gif" alt="" /></a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 			<div class="separator_8"></div>
 			<div class="line_1"></div>
 			<div class="separator_1"></div>
 			<div class="block_two_columns">
 				<div class="column_1 fl">
-					<h2>Latest from the Dog Shows</h2>
-					<p>Here some latest news from Dog's world.</p>
+					<h2>Latest from the blog</h2>
+					<p>Established fact that a reader will be distracted by the readable content of  page when looking at its layout. The point of usingthat it has.</p>
 					<p class="text_w_space"><a href="blog_1.html" class="lnk_w_arrow_general">View all posts</a></p>
 				</div>
 				<div class="column_2_2 separated_border_left_18 fr mt_4">
@@ -394,7 +446,6 @@
 <!-- sign form -->
 <div class="disp_none">
 	<div id="reg_popup">
-            <!--ВОТ ТУТ РЕГИСТРАЦИЯ-->
 		<div class="sign_popup">
 			<h2>Registration</h2>
 			<h3>Register in to your account</h3>
@@ -427,8 +478,6 @@
 			</form>
 		</div>
 	</div>
-    <!--ВОТ ТУТ АВТОРИЗАЦИЯ-->
-    <form method="post" action="login">
 	<div id="sign_popup">
 		<div class="sign_popup">
 			<h2>Authorization on the site</h2>
@@ -443,16 +492,15 @@
 				<div class="inp_line">
 					<label>Password:</label>
 					<div class="field">
-                                            <input type="password" class="w_focus" name="passw" />
+						<input type="text" class="w_focus" name="passw" />
 					</div>
 				</div>
 				<div class="inp_checkbox">
 					<div class="inp_checkbox_in"><a href="#">Forgot your password?</a></div>
-                                        <a href="javascript:;" onclick="document.forms['f_sign2'].submit();" class="button_lnk blue fl def_link" type="submit" value="login"><span>Sign In</span></a> </div>
+					<a href="javascript:;" onclick="document.forms['f_sign2'].submit();" class="button_lnk blue fl def_link"><span>Sign In</span></a> </div>
 			</form>
 		</div>
 	</div>
-        </form>
 </div>
 </body>
 </html>

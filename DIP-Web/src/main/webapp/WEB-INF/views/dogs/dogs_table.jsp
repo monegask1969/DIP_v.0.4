@@ -1,150 +1,158 @@
-<%-- 
-    Document   : dogs_view
-    Created on : 31.07.2016, 20:30:33
-    Author     : moneg
---%>
-
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <link rel="icon" type="image/x-icon" href="favicon.ico" />
 <link rel="shortcut icon"  href="favicon.ico" type="image/x-icon"  />
-<title>Dogs In Pocket</title>
+<title>WebSplash - Additional Elements</title>
+
 <meta name="keywords" content=""/>
 <meta name="description" content="" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
 <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400italic|Oswald' rel='stylesheet' type='text/css' />
 <link rel="stylesheet" href="layout/style.css" type="text/css"/>
 <link rel="stylesheet" href="layout/themes/theme_style.css" type="text/css"/>
-<link rel="stylesheet" href="layout/plugins_styles/prettyPhoto.css" type="text/css"/>
-<!-- Necessary for Popups -->
-<link rel="stylesheet" href="layout/plugins_styles/slider.css" type="text/css"/>
-<!-- Necessary for Brilliant slider -->
+<link rel="stylesheet" href="layout/plugins_styles/nivo-slider.css" type="text/css"/><!-- Necessary for Nivo slider -->
+<link rel="stylesheet" href="layout/plugins_styles/prettyPhoto.css" type="text/css"/><!-- Necessary for Popups -->
 
 <script type="text/javascript" src="layout/js/jquery.js"></script>
-<script type="text/javascript" src="layout/js/jquery-ui-1.8.16.custom.min.js"></script>
-<script type="text/javascript" src="layout/js/slider.js"></script><!-- Necessary for brilliant slider -->
+<script type="text/javascript" src="layout/js/main.js"></script>
+
+<script type="text/javascript" src="layout/js/cycle.js"></script><!-- Necessary for side slider -->
+<script type="text/javascript" src="layout/js/slider_side.js"></script>
+
 <script type="text/javascript" src="layout/js/jquery.carouFredSel-5.1.0-packed.js"></script><!-- Necessary for project carousel -->
 <script type="text/javascript" src="layout/js/project_carousel.js"></script>
+
 <script type="text/javascript" src="layout/js/jquery.prettyPhoto.js"></script><!-- Necessary for Popups -->
 <script type="text/javascript" src="layout/js/popups.js"></script>
-<script type="text/javascript" src="layout/js/main.js"></script>
+
+<script type="text/javascript" src="layout/js/jquery.tools.min.js"></script><!-- Necessary for Tabbed content and accordion -->
+<script type="text/javascript" src="layout/js/tabs.js"></script>
+<script type="text/javascript" src="layout/js/accordion.js"></script>
+
+<script type="text/javascript" src="layout/js/jquery.toggleElements.pack.js"></script><!-- Necessary for Toggle content -->
+<script type="text/javascript" src="layout/js/toggle.js"></script>
+
 <script type="text/javascript" src="layout/js/jquery.cookie.js"></script>
 <script type="text/javascript" src="layout/js/theme_settings.js"></script>
-<script type="text/javascript" src="layout/js/jquery.cookie.js"></script>
-<script type="text/javascript" src="layout/js/theme_settings.js"></script>
+
+<script type="text/javascript">
+    function sub(n){ 
+   var tr = document.getElementById(n).style; 
+   if ('none'==tr.display)tr.display = 'inline'; 
+   else tr.display = 'none' 
+} 
+</script>
+
 </head>
+
 
 <body>
 <div class="pattern"></div>
 <div class="main_bg"></div>
 <div class="wrapper">
     	<!-- HEADER BEGIN -->
-	<div id="header">
-		<div class="inner">
-			<div class="section_top">
-				<div class="block_top_text">
-					<p>Dogs In Pocket - keep Your dogs close</p>
-				</div>
-				<div class="block_search">
-					<div id="search_show" class="button">Search</div>
-					<div id="search_form_block" class="form_wrapper">
-						<div class="form">
-							<form action="#">
-								<div class="field">
-									<input type="text" class="w_def_text" title="Site search" />
-								</div>
-								<input type="submit" class="button" value="Search" />
-							</form>
-						</div>
-					</div>
-				</div>
-				<div class="block_top_lnks">
-					<ul>
-						<li><a href="#sign_popup" name="sign_pop" rel="prettyPhoto[gallery0]">Sign in</a></li>
+        <div id="header">
+        	<div class="inner">
+            	<div class="section_top">
+                	<div class="block_top_text"><p>DIP - Dogs In Pocket</p></div>
+                    
+                    <div class="block_search">
+                    	<div id="search_show" class="button">Search</div>
+                        
+                        <div id="search_form_block" class="form_wrapper">
+                            <div class="form">
+                                <form action="#">
+                                    <div class="field"><input type="text" class="w_def_text" title="Site search" /></div>
+                                    <input type="submit" class="button" value="Search" />
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="block_top_lnks">
+                    	<ul>
+                        	<li><a href="#sign_popup" name="sign_pop" rel="prettyPhoto[gallery0]">Sign in</a></li>
 						<li><a href="#reg_popup" name="reg_pop" rel="prettyPhoto[gallery00]">Registration</a></li>
-					</ul>
-				</div>
-			</div>
-			<div class="section_bottom">
-				<div id="title_top">
-					<p><a href="homepage"><img src="layout/images/title.png" alt="Dogs In Pocket" title="Dogs In Pocket" /></a></p>
-				</div>
-				<div id="main_menu">
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="section_bottom">
+                	<div id="title_top"><p><a href="home.html"><img src="layout/images/spacer.gif" alt="WebSplash" title="WebSplash" /></a></p></div>
+                    
+                    <div id="main_menu">
 					<ul>
-						<li class="active"><a href="homepage">Home</a></li>
-						<li><a href="DogsView">Dogs</a></li>
-						<li><a href="additional_elements.html">Features</a>
-							<ul>
-								<li><a href="pricing_table.html">Pricing table</a></li>
-								<li><a href="additional_elements.html">Additional elements</a></li>
-								<li><a href="columns.html">Columns</a></li>
-								<li><a href="services.html">Services</a></li>
-								<li><a href="archives.html">Archives</a></li>
-								<li><a href="404.html">Page 404</a></li>
-							</ul>
-						</li>
-						<li><a href="portfolio_2c.html">Portfolio</a>
-							<ul>
-								<li><a href="portfolio_2c.html">Portfolio 2 columns</a></li>
-								<li><a href="portfolio_3c.html">Portfolio 3 columns</a></li>
-								<li><a href="portfolio_4c.html">Portfolio 4 columns</a></li>
-								<li><a href="portfolio_with_sidebar_2c.html">Portfolio With Right Sidebar</a>
-									<ul>
-										<li><a href="portfolio_with_sidebar_2c.html">2 Columns Right Sidebar</a></li>
-										<li><a href="portfolio_with_sidebar_3c.html">3 Columns Right Sidebar</a></li>
-									</ul>
-								</li>
-								<li><a href="portfolio_with_link_2c.html">Portfolio With Link Button</a>
-									<ul>
-										<li><a href="portfolio_with_link_2c.html">2 Columns With Link Button</a></li>
-										<li><a href="portfolio_with_link_3c.html">3 Columns With Link Button</a></li>
-										<li><a href="portfolio_with_link_4c.html">4 Columns With Link Button</a></li>
-									</ul>
-								</li>
-								<li><a href="portfolio_gallery.html">Portfolio Gallery Style </a>
-									<ul>
-										<li><a href="portfolio_gallery.html">Gallery With Right Sidebar</a></li>
-										<li><a href="portfolio_gallery_full.html">Galley Full Width</a></li>
-									</ul>
-								</li>
-								<li><a href="portfolio_item.html">Portfolio Item Page</a></li>
-							</ul>
-						</li>
-						<li><a href="blog_1.html">Blog</a>
-							<ul>
-								<li><a href="blog_1.html">Blog Style 1</a></li>
-								<li><a href="blog_2.html">Blog Style 2</a></li>
-								<li><a href="blog_right_1.html">Blog Style 3</a></li>
-								<li><a href="blog_right_2.html">Blog Style 4</a></li>
-								<li><a href="blog_right_3.html">Blog Style 5</a></li>
-								<li><a href="blog_full_width.html">Blog full width</a></li>
-								<li><a href="blog_post.html">Blog post page</a></li>
-							</ul>
-						</li>
+						<li class="active"><a href="home.html">Home</a></li>
+                                                <li><a href="slider_accordion.html">Dog's Table</a></li>
 						<li><a href="about.html">About</a></li>
 						<li><a href="contact.php">Contact</a></li>
 					</ul>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- HEADER END --> 
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- HEADER END -->
         
         <!-- CONTENT BEGIN -->
         <div id="content">
         	<div class="inner">
             	<div class="block_content_top">
                 	<div class="block_page_title">
-                    	<p class="title">Dogs</p>
-                        <p class="subtitle">This is a test dogs view.</p>
+                    	<p class="title">Dogs Table</p>
+                        <p class="subtitle">This is a test page of table view.</p>
                     </div>
                     
-                    <div class="block_back"><p><a href="homepage">Back to Home Page Â»</a></p></div>
-                    <h1>${dogs}</h1>
+                    <div class="block_back"><p><a href="home.html">Back to Home Page »</a></p></div>
                 </div>
                 
                 <div class="separator_1"></div>
+                
+                <div class="block_typography">
+                                            <div class="column_3 fl">
+                            <table border="0" cellpadding="0" cellspacing="2" class="table_type_2">
+                                <tr>
+                                <!--<tr  onclick="sub('1')">-->
+                                    <th>id</th>
+                                    <th>FCI Group</th>
+                                    <th>Breed</th>
+                                    <th>Gender</th>
+                                    <th>Name</th>
+                                    <th>Date Of Birth</th>
+                                    <th>Color</th>
+                                    <th>Chip</th>
+                                    <th>Brand</th>
+                                    <th>Pedigree</th>
+                                    <th>Sire</th>
+                                    <th>Dam</th>
+                                    <th>Owner's name</th>
+                                    <th>Owner's city</th>
+                                    <th class="last">Breeder's name</th>
+                                </tr>
+                              <c:forEach var="d" items="${dogs}">
+                                <tr id="dog_${d.id}">   
+                                <td>${d.fCIgroup}</td>
+                                <td>${d.breed}</td>
+                                <td>${d.gender}</td>
+                                <td>${d.name}</td>
+                                <td>${d.dob}</td>
+                                <td>${d.color}</td>
+                                <td>${d.chip}</td>
+                                <td>${d.brand}</td>
+                                <td>${d.pedigree}</td>
+                                <td>${d.sire}</td>
+                                <td>${d.dam}</td>
+                                <td>${d.oLname}</td>
+                                <td>${d.ownerSCity}</td>
+                                <td>${d.bLname}</td>
+                                <!--<td><a href="users/${u.id}" onclick="return removeDog(${u.id})">delete</a></td>-->
+            </tr>
+            </c:forEach>
+                            </table>
+                        </div>
+                </div>
+                
         	</div>
         </div>
         <!-- CONTENT END -->
@@ -275,8 +283,6 @@
 					<a href="javascript:;" onclick="document.forms['f_sign2'].submit();" class="button_lnk blue fl def_link"><span>Sign In</span></a> </div>
 			</form>
 		</div>
-	</div>
-</div>
+	</div></div>
 </body>
-</html>
 </html>
