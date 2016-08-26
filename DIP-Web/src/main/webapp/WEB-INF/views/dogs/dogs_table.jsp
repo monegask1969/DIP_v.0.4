@@ -109,9 +109,10 @@
                 
                 <div class="separator_1"></div>
                 
+                <form action="" method="get">
                 <div class="block_typography">
                                             <div class="column_3 fl">
-                            <table border="0" cellpadding="0" cellspacing="2" class="table_type_2">
+                            <table border="0" cellpadding="0" cellspacing="0" class="table_type_1">
                                 <tr>
                                 <!--<tr  onclick="sub('1')">-->
                                     <th>id</th>
@@ -152,7 +153,7 @@
                             </table>
                         </div>
                 </div>
-                
+                </form>
         	</div>
         </div>
         <!-- CONTENT END -->
