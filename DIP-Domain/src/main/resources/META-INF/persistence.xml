@@ -6,8 +6,9 @@
     <class>com.so.dip.domain.Users</class>
     <class>com.so.dip.domain.Dogs</class>
     <properties>
-      <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/webstore"/>
+      <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/dogs_in_pocket?zeroDateTimeBehavior=convertToNull"/>
       <property name="javax.persistence.jdbc.user" value="root"/>
+      <property name="javax.persistence.jdbc.password" value=""/>
       <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
       <property name="javax.persistence.jdbc.password" value=""/>
     </properties>

@@ -206,6 +206,7 @@ public class DogsServiceImpl implements DogsService{
         List<Dogs> d = null;
         try{
             d = dogsDao.getList();
+            System.out.println(d.get(0));
         }catch(HibernateException ex){
             ex.printStackTrace();
             System.out.println("hibernate exception occured");

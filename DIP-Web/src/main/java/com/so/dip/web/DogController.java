@@ -2,6 +2,7 @@ package com.so.dip.web;
 
 import com.so.dip.domain.Dogs;
 import com.so.dip.service.DogsService;
+import com.so.dip.service.DogsServiceImpl;
 
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,7 +35,9 @@ public class DogController {
         ModelAndView mv = new ModelAndView();
         List<Dogs> dList = dogsService.getList();
         mv.setViewName("dogs/dogs_table");
-        mv.addObject("dogs/dogs_table", dList);
+        mv.addObject("dogs", dList);
+        System.out.println("DLIST");
+        System.out.println(dList);
         return mv;
     }
      
