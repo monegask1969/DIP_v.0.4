@@ -21,36 +21,23 @@ import org.springframework.web.servlet.ModelAndView;
  *
  * @author moneg
  */
-public class DogsTableController {
-      @Autowired
+public class DogsInputController {
+          @Autowired
     private DogsService dogsService;
-    
-    
-    @RequestMapping(value = {"/dogstable"}, method = {RequestMethod.GET})
+          
+              @RequestMapping(value = {"/dogsinput"}, method = {RequestMethod.GET})
     public ModelAndView getDogsList(){
         ModelAndView mv = new ModelAndView();
         List<Dogs> dList = dogsService.getList();
-        mv.setViewName("dogs/dogs_table");
+        mv.setViewName("dogs/dogs_input");
         mv.addObject("dogs", dList);
-        System.out.println("LISTTT");
-        System.out.println(dList);
-        return mv;
-    }
-     
-    @RequestMapping(value = {"/dogs_table/{id}"}, method = {RequestMethod.GET})
-    public ModelAndView getDogById(
-            @PathVariable("id")int id){
-        ModelAndView mv = new ModelAndView();
-        Dogs dog = dogsService.getById(id);
-        mv.setViewName("dogs/dogs_table");
-        mv.addObject("dog", dog);
         return mv;
     }
     
-    @RequestMapping(value = {"/dogs/{id}"}, method = {RequestMethod.POST})
+        @RequestMapping(value = {"/dogs/{id}"}, method = {RequestMethod.POST})
     public String updateDog(
-            @PathVariable("id")int id,
-            @RequestParam(name = "FCI_group")String firstname,
+ @PathVariable("id")int id,
+            @RequestParam(name = "FCI_group")int fci_group,
             @RequestParam(name = "breed")String breed,
             @RequestParam(name = "gender")String gender,
             @RequestParam(name = "name")String name,
@@ -66,23 +53,28 @@ public class DogsTableController {
             @RequestParam(name = "bLname")String bLname)
     {
         Dogs dog = dogsService.getById(id);
-//        user.setFirstname(firstname);
-//        user.setLastname(lastname);
-//        user.setEmail(email);
-//        user.setPhone(phone);
-//        usersService.updateUser(user);
+        dog.setFCIgroup(fci_group);
+        dog.setBreed(breed);
+        dog.setGender(gender);
+        dog.setName(name);
+        dog.setDob(dob);
+        dog.setColor(color);
+        dog.setChip(chip);
+        dog.setBrand(brand);
+        dog.setPedigree(pedigree);
+        dog.setSire(sire);
+        dog.setDam(dam);
+        dog.setOLname(oLname);
+        dog.setOwnerSCity(ownerSCity);
+        dog.setBLname(bLname);
+//        dogsService.updateDog(dog);
         return "redirect:/dogs";
     }
-    @RequestMapping(value = {"/dogs/{id}"}, method = {RequestMethod.DELETE})
+    @RequestMapping(value = {"/users/{id}"}, method = {RequestMethod.DELETE})
     @ResponseBody
     public void deleteUser(
             @PathVariable("id")int id){
         System.out.println("userid = " + id);
     }
-    
-//    @RequestMapping(value = {"/admin"}, method = {RequestMethod.GET})
-//    public String admin(){
-//        return "admin/admin";
-//    }
     
 }

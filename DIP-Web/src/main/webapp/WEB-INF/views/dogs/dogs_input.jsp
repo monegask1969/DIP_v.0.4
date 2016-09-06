@@ -108,49 +108,9 @@
                 </div>
                 
                 <div class="separator_1"></div>
-                <form action="" method="get">
+                <form action="" method="post">
                 <div class="block_typography">
-                                            <div class="column_3 fl">
-                            <table border="0" cellpadding="0" cellspacing="0" class="table_type_1">
-                                <tr>
-                                <!--<tr  onclick="sub('1')">-->
-                                    <th>id</th>
-                                    <th>FCI Group</th>
-                                    <th>Breed</th>
-                                    <th>Gender</th>
-                                    <th>Name</th>
-                                    <th>Date Of Birth</th>
-                                    <th>Color</th>
-                                    <th>Chip</th>
-                                    <th>Brand</th>
-                                    <th>Pedigree</th>
-                                    <th>Sire</th>
-                                    <th>Dam</th>
-                                    <th>Owner's name</th>
-                                    <th>Owner's city</th>
-                                    <th class="last">Breeder's name</th>
-                                </tr>
-                              <c:forEach var="d" items="${dogs}">
-                                <tr id="dog_${d.id}">   
-                                <td>${d.fCIgroup}</td>
-                                <td>${d.breed}</td>
-                                <td>${d.gender}</td>
-                                <td>${d.name}</td>
-                                <td>${d.dob}</td>
-                                <td>${d.color}</td>
-                                <td>${d.chip}</td>
-                                <td>${d.brand}</td>
-                                <td>${d.pedigree}</td>
-                                <td>${d.sire}</td>
-                                <td>${d.dam}</td>
-                                <td>${d.oLname}</td>
-                                <td>${d.ownerSCity}</td>
-                                <td>${d.bLname}</td>
-                                <!--<td><a href="users/${u.id}" onclick="return removeDog(${u.id})">delete</a></td>-->
-                                </tr>
-                              </c:forEach>
-                            </table>
-                        </div>
+                    <input type="text" name="username"></input>
                 </div>
                                 </form>
         	</div>
