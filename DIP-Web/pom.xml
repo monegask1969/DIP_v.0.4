@@ -24,13 +24,12 @@
             <groupId>com.so</groupId>
             <artifactId>DIP-Domain</artifactId>
             <version>1.0-SNAPSHOT</version>
-            <type>jar</type>
+            <type>jar</type> 
         </dependency>
         <dependency>
             <groupId>com.so</groupId>
             <artifactId>DIP-Service</artifactId>
             <version>1.0-SNAPSHOT</version>
-            <type>jar</type>
         </dependency>
         <dependency>
             <groupId>javax</groupId>

@@ -11,6 +11,7 @@
     <!--<property name="hibernate.hbm2ddl.auto">create</property>-->    
     
     <mapping class="com.so.dip.domain.Users"/>
+    <mapping class="com.so.dip.domain.Dogs"/>
   </session-factory>
   
 </hibernate-configuration>

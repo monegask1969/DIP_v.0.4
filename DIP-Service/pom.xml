@@ -39,12 +39,6 @@
             <artifactId>jaxen</artifactId>
             <version>1.1.1</version>
         </dependency>-->
-        <dependency>
-            <groupId>com.so</groupId>
-            <artifactId>DIP-Domain</artifactId>
-            <version>1.0-SNAPSHOT</version>
-            <type>jar</type>
-        </dependency>
     </dependencies>
     
 <!--    <build>
