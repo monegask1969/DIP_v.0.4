@@ -7,6 +7,7 @@ package com.so.dip.domain;
 
 import java.util.Date;
 import java.util.List;
+import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.criterion.Restrictions;
 
@@ -127,7 +128,8 @@ public class DogsDAOImpl implements DogsDAO{
     @Override
     public List<Dogs> getList() {
         Session session = HibernateUtil.getSessionFactory().openSession();
-        List<Dogs> dog = session.createCriteria(Dogs.class).list();
+        Criteria crit = session.createCriteria(Dogs.class); 
+        List<Dogs> dog = (List<Dogs>)crit.list();
         session.close();
         return dog;
     }

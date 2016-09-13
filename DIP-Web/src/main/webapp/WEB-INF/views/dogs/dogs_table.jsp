@@ -1,3 +1,9 @@
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+<c:set var="req" value="${pageContext.request}" />
+<c:set var="url">${req.requestURL}</c:set>
+<c:set var="uri" value="${req.requestURI}" />
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -104,7 +110,7 @@
                         <p class="subtitle">This is a test page of table view.</p>
                     </div>
                     
-                    <div class="block_back"><p><a href="home.html">Back to Home Page »</a></p></div>
+                    <div class="block_back"><p><a href="home.html">Back to Home Page Â»</a></p></div>
                 </div>
                 
                 <div class="separator_1"></div>
@@ -113,7 +119,7 @@
                                             <div class="column_3 fl">
                             <table border="0" cellpadding="0" cellspacing="0" class="table_type_1">
                                 <tr>
-                                <!--<tr  onclick="sub('1')">-->
+                                <tr  onclick="sub('1')">
                                     <th>id</th>
                                     <th>FCI Group</th>
                                     <th>Breed</th>
@@ -130,7 +136,7 @@
                                     <th>Owner's city</th>
                                     <th class="last">Breeder's name</th>
                                 </tr>
-                              <c:forEach var="d" items="${dogs}">
+                              <c:forEach var="d" items="${dog}">
                                 <tr id="dog_${d.id}">   
                                 <td>${d.fCIgroup}</td>
                                 <td>${d.breed}</td>
@@ -146,7 +152,6 @@
                                 <td>${d.oLname}</td>
                                 <td>${d.ownerSCity}</td>
                                 <td>${d.bLname}</td>
-                                <!--<td><a href="users/${u.id}" onclick="return removeDog(${u.id})">delete</a></td>-->
                                 </tr>
                               </c:forEach>
                             </table>

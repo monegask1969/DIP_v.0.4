@@ -38,7 +38,7 @@ import javax.xml.bind.annotation.XmlRootElement;
     @NamedQuery(name = "Dogs.findByChip", query = "SELECT d FROM Dogs d WHERE d.chip = :chip"),
     @NamedQuery(name = "Dogs.findByBrand", query = "SELECT d FROM Dogs d WHERE d.brand = :brand"),
     @NamedQuery(name = "Dogs.findByPedigree", query = "SELECT d FROM Dogs d WHERE d.pedigree = :pedigree"),
-    @NamedQuery(name = "Dogs.findByOwnerSCity", query = "SELECT d FROM Dogs d WHERE d.ownerSCity = :ownerSCity"),
+    @NamedQuery(name = "Dogs.findByOwnersCity", query = "SELECT d FROM Dogs d WHERE d.ownersCity = :ownersCity"),
     @NamedQuery(name = "Dogs.findBySire", query = "SELECT d FROM Dogs d WHERE d.sire = :sire"),
     @NamedQuery(name = "Dogs.findByDam", query = "SELECT d FROM Dogs d WHERE d.dam = :dam"),
     @NamedQuery(name = "Dogs.findByFCIgroup", query = "SELECT d FROM Dogs d WHERE d.fCIgroup = :fCIgroup"),
@@ -82,8 +82,8 @@ public class Dogs implements Serializable {
     @Column(name = "pedigree")
     private String pedigree;
     @Basic(optional = false)
-    @Column(name = "owner's_city")
-    private String ownerSCity;
+    @Column(name = "owners_city")
+    private String ownersCity;
     @Basic(optional = false)
     @Column(name = "sire")
     private String sire;
@@ -119,7 +119,7 @@ public class Dogs implements Serializable {
         this.id = id;
     }
 
-    public Dogs(Integer id, String breed, String gender, String name, Date dob, String color, String chip, String brand, String pedigree, String ownerSCity, String sire, String dam, int fCIgroup, String oFname, String oSname, String oLname, String bFname, String bSname, String bLname) {
+    public Dogs(Integer id, String breed, String gender, String name, Date dob, String color, String chip, String brand, String pedigree, String ownersCity, String sire, String dam, int fCIgroup, String oFname, String oSname, String oLname, String bFname, String bSname, String bLname) {
         this.id = id;
         this.breed = breed;
         this.gender = gender;
@@ -129,7 +129,7 @@ public class Dogs implements Serializable {
         this.chip = chip;
         this.brand = brand;
         this.pedigree = pedigree;
-        this.ownerSCity = ownerSCity;
+        this.ownersCity = ownersCity;
         this.sire = sire;
         this.dam = dam;
         this.fCIgroup = fCIgroup;
@@ -213,12 +213,12 @@ public class Dogs implements Serializable {
         this.pedigree = pedigree;
     }
 
-    public String getOwnerSCity() {
-        return ownerSCity;
+    public String getOwnersCity() {
+        return ownersCity;
     }
 
-    public void setOwnerSCity(String ownerSCity) {
-        this.ownerSCity = ownerSCity;
+    public void setOwnersCity(String ownersCity) {
+        this.ownersCity = ownersCity;
     }
 
     public String getSire() {

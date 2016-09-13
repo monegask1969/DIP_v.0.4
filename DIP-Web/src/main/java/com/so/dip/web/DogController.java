@@ -1,8 +1,10 @@
 package com.so.dip.web;
 
 import com.so.dip.domain.Dogs;
+import com.so.dip.domain.DogsDAOImpl;
 import com.so.dip.service.DogsService;
 import com.so.dip.service.DogsServiceImpl;
+import java.util.Date;
 
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,15 +29,17 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class DogController {
     @Autowired
-    private DogsService dogsService;
+    DogsService dogsService;
     
     
     @RequestMapping(value = {"/","/dogs"}, method = {RequestMethod.GET})
     public ModelAndView getUsersList(){
         ModelAndView mv = new ModelAndView();
         List<Dogs> dList = dogsService.getList();
+//        List<Dogs> dList = new DogsDAOImpl().getList();
         mv.setViewName("dogs/dogs_table");
         mv.addObject("dogs", dList);
+        System.out.println(dList.get(0).getDob().toString());
         System.out.println("DLIST");
         System.out.println(dList);
         return mv;
@@ -51,21 +55,40 @@ public class DogController {
         return mv;
     }
     
-    @RequestMapping(value = {"/dogs/{id}"}, method = {RequestMethod.POST})
-    public String updateUser(
-            @PathVariable("id")int id,
-            @RequestParam(name = "FCI_group")String firstname,
+@RequestMapping(value = {"/dogs/{id}"}, method = {RequestMethod.POST})
+    public String updateDog(
+ @PathVariable("id")int id,
+            @RequestParam(name = "FCI_group")int fci_group,
             @RequestParam(name = "breed")String breed,
             @RequestParam(name = "gender")String gender,
-            @RequestParam(name = "name")String name)
+            @RequestParam(name = "name")String name,
+            @RequestParam(name = "dob")Date dob,
+            @RequestParam(name = "color")String color,
+            @RequestParam(name = "chip")String chip,
+            @RequestParam(name = "brand")String brand,
+            @RequestParam(name = "pedigree")String pedigree,
+            @RequestParam(name = "sire")String sire,
+            @RequestParam(name = "dam")String dam,
+            @RequestParam(name = "oLname")String oLname,
+            @RequestParam(name = "ownerSCity")String ownerSCity,
+            @RequestParam(name = "bLname")String bLname)
     {
         Dogs dog = dogsService.getById(id);
-//        user.setFirstname(firstname);
-//        user.setLastname(lastname);
-//        user.setEmail(email);
-//        user.setPhone(phone);
-        System.out.println(firstname);
-//        usersService.updateUser(user);
+        dog.setFCIgroup(fci_group);
+        dog.setBreed(breed);
+        dog.setGender(gender);
+        dog.setName(name);
+        dog.setDob(dob);
+        dog.setColor(color);
+        dog.setChip(chip);
+        dog.setBrand(brand);
+        dog.setPedigree(pedigree);
+        dog.setSire(sire);
+        dog.setDam(dam);
+        dog.setOLname(oLname);
+        dog.setOwnersCity(ownerSCity);
+        dog.setBLname(bLname);
+//        dogsService.updateDog(dog);
         return "redirect:/dogs";
     }
     @RequestMapping(value = {"/dogs/{id}"}, method = {RequestMethod.DELETE})
