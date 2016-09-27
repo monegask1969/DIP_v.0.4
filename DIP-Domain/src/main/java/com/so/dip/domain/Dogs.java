@@ -38,16 +38,16 @@ import javax.xml.bind.annotation.XmlRootElement;
     @NamedQuery(name = "Dogs.findByChip", query = "SELECT d FROM Dogs d WHERE d.chip = :chip"),
     @NamedQuery(name = "Dogs.findByBrand", query = "SELECT d FROM Dogs d WHERE d.brand = :brand"),
     @NamedQuery(name = "Dogs.findByPedigree", query = "SELECT d FROM Dogs d WHERE d.pedigree = :pedigree"),
-    @NamedQuery(name = "Dogs.findByOwnersCity", query = "SELECT d FROM Dogs d WHERE d.ownersCity = :ownersCity"),
+    @NamedQuery(name = "Dogs.findByOwnerscity", query = "SELECT d FROM Dogs d WHERE d.ownerscity = :ownerscity"),
     @NamedQuery(name = "Dogs.findBySire", query = "SELECT d FROM Dogs d WHERE d.sire = :sire"),
     @NamedQuery(name = "Dogs.findByDam", query = "SELECT d FROM Dogs d WHERE d.dam = :dam"),
-    @NamedQuery(name = "Dogs.findByFCIgroup", query = "SELECT d FROM Dogs d WHERE d.fCIgroup = :fCIgroup"),
-    @NamedQuery(name = "Dogs.findByOFname", query = "SELECT d FROM Dogs d WHERE d.oFname = :oFname"),
-    @NamedQuery(name = "Dogs.findByOSname", query = "SELECT d FROM Dogs d WHERE d.oSname = :oSname"),
-    @NamedQuery(name = "Dogs.findByOLname", query = "SELECT d FROM Dogs d WHERE d.oLname = :oLname"),
-    @NamedQuery(name = "Dogs.findByBFname", query = "SELECT d FROM Dogs d WHERE d.bFname = :bFname"),
-    @NamedQuery(name = "Dogs.findByBSname", query = "SELECT d FROM Dogs d WHERE d.bSname = :bSname"),
-    @NamedQuery(name = "Dogs.findByBLname", query = "SELECT d FROM Dogs d WHERE d.bLname = :bLname")})
+    @NamedQuery(name = "Dogs.findByFcigroup", query = "SELECT d FROM Dogs d WHERE d.fcigroup = :fcigroup"),
+    @NamedQuery(name = "Dogs.findByOwnfname", query = "SELECT d FROM Dogs d WHERE d.ownfname = :ownfname"),
+    @NamedQuery(name = "Dogs.findByOwnsname", query = "SELECT d FROM Dogs d WHERE d.ownsname = :ownsname"),
+    @NamedQuery(name = "Dogs.findByOwnlname", query = "SELECT d FROM Dogs d WHERE d.ownlname = :ownlname"),
+    @NamedQuery(name = "Dogs.findByBrefname", query = "SELECT d FROM Dogs d WHERE d.brefname = :brefname"),
+    @NamedQuery(name = "Dogs.findByBresname", query = "SELECT d FROM Dogs d WHERE d.bresname = :bresname"),
+    @NamedQuery(name = "Dogs.findByBrelname", query = "SELECT d FROM Dogs d WHERE d.brelname = :brelname")})
 public class Dogs implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -82,8 +82,8 @@ public class Dogs implements Serializable {
     @Column(name = "pedigree")
     private String pedigree;
     @Basic(optional = false)
-    @Column(name = "owners_city")
-    private String ownersCity;
+    @Column(name = "ownerscity")
+    private String ownerscity;
     @Basic(optional = false)
     @Column(name = "sire")
     private String sire;
@@ -91,26 +91,26 @@ public class Dogs implements Serializable {
     @Column(name = "dam")
     private String dam;
     @Basic(optional = false)
-    @Column(name = "FCI_group")
-    private int fCIgroup;
+    @Column(name = "fcigroup")
+    private int fcigroup;
     @Basic(optional = false)
-    @Column(name = "o_fname")
-    private String oFname;
+    @Column(name = "ownfname")
+    private String ownfname;
     @Basic(optional = false)
-    @Column(name = "o_sname")
-    private String oSname;
+    @Column(name = "ownsname")
+    private String ownsname;
     @Basic(optional = false)
-    @Column(name = "o_lname")
-    private String oLname;
+    @Column(name = "ownlname")
+    private String ownlname;
     @Basic(optional = false)
-    @Column(name = "b_fname")
-    private String bFname;
+    @Column(name = "brefname")
+    private String brefname;
     @Basic(optional = false)
-    @Column(name = "b_sname")
-    private String bSname;
+    @Column(name = "bresname")
+    private String bresname;
     @Basic(optional = false)
-    @Column(name = "b_lname")
-    private String bLname;
+    @Column(name = "brelname")
+    private String brelname;
 
     public Dogs() {
     }
@@ -119,7 +119,7 @@ public class Dogs implements Serializable {
         this.id = id;
     }
 
-    public Dogs(Integer id, String breed, String gender, String name, Date dob, String color, String chip, String brand, String pedigree, String ownersCity, String sire, String dam, int fCIgroup, String oFname, String oSname, String oLname, String bFname, String bSname, String bLname) {
+    public Dogs(Integer id, String breed, String gender, String name, Date dob, String color, String chip, String brand, String pedigree, String ownerscity, String sire, String dam, int fcigroup, String ownfname, String ownsname, String ownlname, String brefname, String bresname, String brelname) {
         this.id = id;
         this.breed = breed;
         this.gender = gender;
@@ -129,16 +129,16 @@ public class Dogs implements Serializable {
         this.chip = chip;
         this.brand = brand;
         this.pedigree = pedigree;
-        this.ownersCity = ownersCity;
+        this.ownerscity = ownerscity;
         this.sire = sire;
         this.dam = dam;
-        this.fCIgroup = fCIgroup;
-        this.oFname = oFname;
-        this.oSname = oSname;
-        this.oLname = oLname;
-        this.bFname = bFname;
-        this.bSname = bSname;
-        this.bLname = bLname;
+        this.fcigroup = fcigroup;
+        this.ownfname = ownfname;
+        this.ownsname = ownsname;
+        this.ownlname = ownlname;
+        this.brefname = brefname;
+        this.bresname = bresname;
+        this.brelname = brelname;
     }
 
     public Integer getId() {
@@ -213,12 +213,12 @@ public class Dogs implements Serializable {
         this.pedigree = pedigree;
     }
 
-    public String getOwnersCity() {
-        return ownersCity;
+    public String getOwnerscity() {
+        return ownerscity;
     }
 
-    public void setOwnersCity(String ownersCity) {
-        this.ownersCity = ownersCity;
+    public void setOwnerscity(String ownerscity) {
+        this.ownerscity = ownerscity;
     }
 
     public String getSire() {
@@ -237,60 +237,60 @@ public class Dogs implements Serializable {
         this.dam = dam;
     }
 
-    public int getFCIgroup() {
-        return fCIgroup;
+    public int getFcigroup() {
+        return fcigroup;
     }
 
-    public void setFCIgroup(int fCIgroup) {
-        this.fCIgroup = fCIgroup;
+    public void setFcigroup(int fcigroup) {
+        this.fcigroup = fcigroup;
     }
 
-    public String getOFname() {
-        return oFname;
+    public String getOwnfname() {
+        return ownfname;
     }
 
-    public void setOFname(String oFname) {
-        this.oFname = oFname;
+    public void setOwnfname(String ownfname) {
+        this.ownfname = ownfname;
     }
 
-    public String getOSname() {
-        return oSname;
+    public String getOwnsname() {
+        return ownsname;
     }
 
-    public void setOSname(String oSname) {
-        this.oSname = oSname;
+    public void setOwnsname(String ownsname) {
+        this.ownsname = ownsname;
     }
 
-    public String getOLname() {
-        return oLname;
+    public String getOwnlname() {
+        return ownlname;
     }
 
-    public void setOLname(String oLname) {
-        this.oLname = oLname;
+    public void setOwnlname(String ownlname) {
+        this.ownlname = ownlname;
     }
 
-    public String getBFname() {
-        return bFname;
+    public String getBrefname() {
+        return brefname;
     }
 
-    public void setBFname(String bFname) {
-        this.bFname = bFname;
+    public void setBrefname(String brefname) {
+        this.brefname = brefname;
     }
 
-    public String getBSname() {
-        return bSname;
+    public String getBresname() {
+        return bresname;
     }
 
-    public void setBSname(String bSname) {
-        this.bSname = bSname;
+    public void setBresname(String bresname) {
+        this.bresname = bresname;
     }
 
-    public String getBLname() {
-        return bLname;
+    public String getBrelname() {
+        return brelname;
     }
 
-    public void setBLname(String bLname) {
-        this.bLname = bLname;
+    public void setBrelname(String brelname) {
+        this.brelname = brelname;
     }
 
     @Override

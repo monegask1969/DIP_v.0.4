@@ -36,9 +36,9 @@ public class DogController {
     public ModelAndView getUsersList(){
         ModelAndView mv = new ModelAndView();
         List<Dogs> dList = dogsService.getList();
-//        List<Dogs> dList = new DogsDAOImpl().getList();
-        mv.setViewName("dogs/dogs_table");
-        mv.addObject("dogs", dList);
+//        mv.setViewName("dogs/dogs_table");
+        mv.setViewName("dogs/dogs_input");
+        mv.addObject("dog", dList);
         System.out.println(dList.get(0).getDob().toString());
         System.out.println("DLIST");
         System.out.println(dList);
@@ -51,7 +51,7 @@ public class DogController {
         ModelAndView mv = new ModelAndView();
         Dogs dog = dogsService.getById(id);
         mv.setViewName("dogs/dogs_table");
-        mv.addObject("dog", dog);
+        mv.addObject("d", dog);
         return mv;
     }
     
@@ -74,7 +74,7 @@ public class DogController {
             @RequestParam(name = "bLname")String bLname)
     {
         Dogs dog = dogsService.getById(id);
-        dog.setFCIgroup(fci_group);
+        dog.setFcigroup(fci_group);
         dog.setBreed(breed);
         dog.setGender(gender);
         dog.setName(name);
@@ -85,9 +85,9 @@ public class DogController {
         dog.setPedigree(pedigree);
         dog.setSire(sire);
         dog.setDam(dam);
-        dog.setOLname(oLname);
-        dog.setOwnersCity(ownerSCity);
-        dog.setBLname(bLname);
+        dog.setOwnlname(oLname);
+        dog.setOwnerscity(ownerSCity);
+        dog.setBrelname(bLname);
 //        dogsService.updateDog(dog);
         return "redirect:/dogs";
     }

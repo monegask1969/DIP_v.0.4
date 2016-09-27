@@ -1,3 +1,9 @@
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+<c:set var="req" value="${pageContext.request}" />
+<c:set var="url">${req.requestURL}</c:set>
+<c:set var="uri" value="${req.requestURI}" />
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -96,25 +102,28 @@
         <!-- HEADER END -->
         
         <!-- CONTENT BEGIN -->
-        <div id="content">
-        	<div class="inner">
-            	<div class="block_content_top">
-                	<div class="block_page_title">
-                    	<p class="title">Dogs Table</p>
-                        <p class="subtitle">This is a test page of table view.</p>
-                    </div>
-                    
-                    <div class="block_back"><p><a href="home.html">Back to Home Page »</a></p></div>
-                </div>
-                
-                <div class="separator_1"></div>
-                <form action="" method="post">
-                <div class="block_typography">
-                    <input type="text" name="username"></input>
-                </div>
-                                </form>
-        	</div>
-        </div>
+        <div id="content" class="block_typography">
+		<div class="inner">
+			<div class="block_content_top">
+				<div class="block_page_title">
+					<p class="title">Test page. Input dog.</p>
+					<p class="subtitle">This is a test Dogs input page.</p>
+				</div>
+                            
+				<div class="block_back">
+					<p><a href="${pageContext.request.contextPath}/home_page">Back to Home Page Â»</a></p>
+				</div>
+			</div>
+			<div class="separator_1"></div>
+			<div class="block_two_columns">
+				<div class="column_14 separated_border_right_24 mt_5 fl">
+					
+												
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
         <!-- CONTENT END -->
             
         <!-- FOOTER BEGIN -->

@@ -1,6 +1,8 @@
 package com.so.dip.web;
 
+import com.so.dip.domain.Dogs;
 import com.so.dip.domain.Users;
+import com.so.dip.service.DogsService;
 import com.so.dip.service.UsersService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,14 +30,13 @@ public class IndexController {
     UsersService usersService;
     
     
-//    @RequestMapping(value = {"/","/users"}, method = {RequestMethod.GET})
-//    public ModelAndView getUsersList(){
-//        ModelAndView mv = new ModelAndView();
-//        List<Users> uList = usersService.getList();
-//        mv.setViewName("users/users");
-//        mv.addObject("users", uList);
-//        return mv;
-//    }
+    @RequestMapping(value = {"/home_page"}, method = {RequestMethod.GET})
+    public ModelAndView getUsersList(){
+        ModelAndView mv = new ModelAndView();
+        mv.setViewName("dogs/home_page");
+        return mv;
+    }
+    
 //    
 //    @RequestMapping(value = {"/users/{id}"}, method = {RequestMethod.GET})
 //    public ModelAndView getUserById(

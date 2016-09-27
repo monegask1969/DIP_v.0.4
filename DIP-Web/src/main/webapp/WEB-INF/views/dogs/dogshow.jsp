@@ -102,77 +102,54 @@
         <!-- HEADER END -->
         
         <!-- CONTENT BEGIN -->
-        <div id="content">
-        	<div class="inner">
-            	<div class="block_content_top">
-                	<div class="block_page_title">
-                    	<p class="title">Dogs Table</p>
-                        <p class="subtitle">This is a test page of table view.</p>
-                    </div>
-                    
-                    <div class="block_back"><p><a href="home.html">Back to Home Page »</a></p></div>
-                </div>
-                
-                <div class="separator_1"></div>
-                <form action="" method="get">
-                <div class="block_typography">
-                                            <div class="column_3 fl">
-                                                
-                            <table border="0" cellpadding="0" cellspacing="" class="table_type_1">
-                                <tbody>
-                                <tr>
-                                    <tr  onclick="sub('1')" valign="middle" >
-                                    <!--<th>id</th>-->
-                                    <th valign="baseline">FCI Group</th>
-                                    <th>Breed</th>
-                                    <th>Gender</th>
-                                    <th>Name</th>
-                                    <th>Date Of Birth</th>
-                                    <th>Color</th>
-                                    <th>Chip</th>
-                                    <th>Brand</th>
-                                    <th>Pedigree</th>
-                                    <th>Sire</th>
-                                    <th>Dam</th>
-                                    <th>Owner's name</th>
-                                    <th>Owner's city</th>
-                                    <th class="last">Breeder's name</th>
-                                </tr>
-                              <c:forEach var="d" items="${dog}">
-                                <tr id="dog_${d.id}">   
-                                <td>${d.fcigroup}</td>
-                                <td>${d.breed}</td>
-                                <td>${d.gender}</td>
-                                <td>${d.name}</td>
-                                <td>${d.dob}</td>
-                                <td>${d.color}</td>
-                                <td>${d.chip}</td>
-                                <td>${d.brand}</td>
-                                <td>${d.pedigree}</td>
-                                <td>${d.sire}</td>
-                                <td>${d.dam}</td>
-                                <td>${d.ownlname}</td>
-                                <td>${d.ownerscity}</td>
-                                <td class="last">${d.brelname}</td>
-                                </tr>
-                              </c:forEach>
-                                    </tbody>
-                            </table><!--                                    <td><c:out value="${d.breed}"/></td>
-                                    <td><c:out value="${d.gender}"/></td>
-                                    <td><c:out value="${d.name}"/></td>
-                                    <td><c:out value="${d.dob}"/></td>
-                                    <td><c:out value="${d.color}"/></td>
-                                    <td><c:out value="${d.chip}"/></td>
-                                    <td><c:out value="${d.brand}"/></td>
-                                    <td><c:out value="${d.pedigree}"/></td>
-                                    <td><c:out value="${d.sire}"/></td>
-                                    <td><c:out value="${d.dam}"/></td>-->
-
-                        </div>
-                </div>
-                                </form>
-        	</div>
-        </div>
+        <div id="content" class="block_typography">
+		<div class="inner">
+			<div class="block_content_top">
+				<div class="block_page_title">
+					<p class="title">Blog Style 1</p>
+					<p class="subtitle">This is a test Dogs Show page.</p>
+				</div>
+				<div class="block_back">
+					<p><a href="home.html">Back to Home Page »</a></p>
+				</div>
+			</div>
+			<div class="separator_1"></div>
+			<div class="block_two_columns">
+				<div class="column_14 separated_border_right_24 mt_5 fl">
+					
+						
+                                                    <c:forEach var="show" items="${dogshow}">
+                                                        <div class="block_blog_type_5">
+                                                        <div class="title">
+                                                            <div class="date">
+                                                                <p>${show.date}</p>
+                                                            </div> 
+							<h1><a href="blog_post.html">${show.title}</a></h1>
+                                                        <div class="blog_info">	
+								<div class="blog_info_by"><span>Sponsor</span> <a href="#">${show.sponsor}</a></div>
+							</div>
+                                                        </div>
+                                                        <div class="block_general_pic"><a href="ПЕРЕХОД НА ДРУГУЮ ЖСП"><img src="${show.pic}" class="r_conner_pic" alt="" /></a></div>
+                                                                <div class="blog_content">
+                                                                    <p>${show.info}<a href="ВСТАВИТЬ ССЫЛКУ НА ПЕРЕХОД ЖСП" class="arr_d"><img src="layout/images/arrow_1.gif" alt="" /></a></p>
+                                                                    <p class="text_w_space_5"><a href="ВСТАВИТЬ ССЫЛКУ НА ПЕРЕХОД ЖСП" class="lnk_w_arrow_general">Read more</a></p>
+                                                                </div>
+                                                        </div>
+                                                        <div class="separator_1"></div>
+                                                    </c:forEach>					
+					
+						
+					</div>
+					<div class="block_paginator">
+						<div class="pages">
+							<p>Page 1 of 5</p>
+						</div>
+						<div class="pages_num"> <a href="#" class="nav prev inactive">Prevoius</a> <a href="#" class="active">1</a> <a href="#">2</a> <a href="#">3</a> <a href="#">4</a> <a href="#">5</a> <a href="#" class="nav next">Next</a> </div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
         <!-- CONTENT END -->
             
         <!-- FOOTER BEGIN -->
