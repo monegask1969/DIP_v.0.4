@@ -5,6 +5,8 @@
  */
 package com.so.dip.domain.config;
 
+import com.so.dip.domain.DogShowDAO;
+import com.so.dip.domain.DogShowDAOImpl;
 import com.so.dip.domain.DogsDAO;
 import com.so.dip.domain.DogsDAOImpl;
 import com.so.dip.domain.UsersDAO;
@@ -30,6 +32,10 @@ public class DomainConfig {
     @Bean
     public DogsDAO getDogsDAO(){
         return new DogsDAOImpl();
+    }
+    @Bean
+    public DogShowDAO getDogShowDAO(){
+        return new DogShowDAOImpl();
     }
     
 }

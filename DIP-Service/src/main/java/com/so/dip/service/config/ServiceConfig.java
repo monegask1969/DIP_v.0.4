@@ -5,6 +5,8 @@
  */
 package com.so.dip.service.config;
 
+import com.so.dip.service.DogShowService;
+import com.so.dip.service.DogShowServiceImpl;
 import com.so.dip.service.DogsService;
 import com.so.dip.service.DogsServiceImpl;
 import com.so.dip.service.UsersService;
@@ -34,6 +36,10 @@ public class ServiceConfig {
     @Bean
     public DogsService getDogsService(){
         return new DogsServiceImpl();
+    }
+    @Bean
+    public DogShowService getDogShowService(){
+        return new DogShowServiceImpl();
     }
     
 }

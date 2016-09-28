@@ -91,8 +91,8 @@
                     <div id="main_menu">
 					<ul>
 						<li><a href="${pageContext.request.contextPath}/home_page">Home</a></li>
-                                                <li class="active"><a href="${pageContext.request.contextPath}/dogshow">Dog Show</a></li>
-						<li><a href="${pageContext.request.contextPath}/about">About</a></li>
+                                                <li><a href="${pageContext.request.contextPath}/dogshow">Dog Show</a></li>
+						<li class="active"><a href="${pageContext.request.contextPath}/about">About</a></li>
 						<li><a href="contact.php">Contact</a></li>
 					</ul>
                     </div>
@@ -106,9 +106,10 @@
 		<div class="inner">
 			<div class="block_content_top">
 				<div class="block_page_title">
-					<p class="title">Dog Show page</p>
-					<p class="subtitle">This is a test Dogs Show page.</p>
+					<p class="title">About page.</p>
+					<p class="subtitle">This is a test page.</p>
 				</div>
+                            
 				<div class="block_back">
 					<p><a href="${pageContext.request.contextPath}/home_page">Back to Home Page »</a></p>
 				</div>
@@ -116,30 +117,9 @@
 			<div class="separator_1"></div>
 			<div class="block_two_columns">
 				<div class="column_14 separated_border_right_24 mt_5 fl">
-                                    <p>DOGSHOWSSS</p>
-						
-                                                    <c:forEach var="dsh" items="${dogshow}">
-                                                        <div class="block_blog_type_5">
-                                                        <div class="title">
-                                                            <div class="date">
-                                                                <p></p>
-                                                                <p id="dsh_${dsh.id}">${dsh.date}</p>
-                                                            </div> 
-							<h1><a href="blog_post.html">${dogshow.title}</a></h1>
-                                                        <div class="blog_info">	
-								<div class="blog_info_by"><span>Sponsor</span> <a href="#">${dogshow.sponsor}</a></div>
-							</div>
-                                                        </div>
-                                                        <div class="block_general_pic"><a href="ПЕРЕХОД НА ДРУГУЮ ЖСП"><img src="${dogshow.picture}" class="r_conner_pic" alt="" /></a></div>
-                                                                <div class="blog_content">
-                                                                    <p>${dogshow.description}<a href="ВСТАВИТЬ ССЫЛКУ НА ПЕРЕХОД ЖСП" class="arr_d"><img src="layout/images/arrow_1.gif" alt="" /></a></p>
-                                                                    <p class="text_w_space_5"><a href="ВСТАВИТЬ ССЫЛКУ НА ПЕРЕХОД ЖСП" class="lnk_w_arrow_general">Read more</a></p>
-                                                                </div>
-                                                        </div>
-                                                        <div class="separator_1"></div>
-                                                    </c:forEach>							
+					
+												
 					</div>
-
 				</div>
 			</div>
 		</div>

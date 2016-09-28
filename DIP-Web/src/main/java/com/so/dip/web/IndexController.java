@@ -30,13 +30,6 @@ public class IndexController {
     UsersService usersService;
     
     
-    @RequestMapping(value = {"/home_page"}, method = {RequestMethod.GET})
-    public ModelAndView getUsersList(){
-        ModelAndView mv = new ModelAndView();
-        mv.setViewName("dogs/home_page");
-        return mv;
-    }
-    
 //    
 //    @RequestMapping(value = {"/users/{id}"}, method = {RequestMethod.GET})
 //    public ModelAndView getUserById(

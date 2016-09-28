@@ -1,4 +1,10 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+<c:set var="req" value="${pageContext.request}" />
+<c:set var="url">${req.requestURL}</c:set>
+<c:set var="uri" value="${req.requestURI}" />
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <link rel="icon" type="image/x-icon" href="favicon.ico" />
@@ -66,9 +72,9 @@
 				</div>
 				<div id="main_menu">
 					<ul>
-						<li class="active"><a href="home.html">Home</a></li>
-                                                <li><a href="slider_accordion.html">Dog's Table</a></li>
-						<li><a href="about.html">About</a></li>
+						<li class="active"><a href="${pageContext.request.contextPath}/home_page">Home</a></li>
+                                                <li><a href="${pageContext.request.contextPath}/dogshow">Dog Show</a></li>
+						<li><a href="${pageContext.request.contextPath}/about">About</a></li>
 						<li><a href="contact.php">Contact</a></li>
 					</ul>
 				</div>
@@ -390,7 +396,7 @@
 			<div class="inner">
 				<div class="col_1">
 					<div id="title_bottom">
-						<p><a href="home.html"><img src="layout/images/spacer.gif" alt="WebSplash" title="WebSplash" /></a></p>
+						<p><a href="${pageContext.request.contextPath}/home_page"><img src="layout/images/spacer.gif" alt="WebSplash" title="WebSplash" /></a></p>
 					</div>
 					<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration some form, by injected  randomised words which don't look even slightly If you are going to use... <a href="#"><img src="layout/images/arrow_6.gif" alt="" /></a></p>
 				</div>

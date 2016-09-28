@@ -90,9 +90,9 @@
                     
                     <div id="main_menu">
 					<ul>
-						<li class="active"><a href="home.html">Home</a></li>
-                                                <li><a href="slider_accordion.html">Dog's Table</a></li>
-						<li><a href="about.html">About</a></li>
+						<li class="active"><a href="${pageContext.request.contextPath}/home_page">Home</a></li>
+                                                <li><a href="${pageContext.request.contextPath}/dogshow">Dog Show</a></li>
+						<li><a href="${pageContext.request.contextPath}/about">About</a></li>
 						<li><a href="contact.php">Contact</a></li>
 					</ul>
                     </div>
@@ -180,7 +180,7 @@
             <div class="section_top">
             	<div class="inner">
                 	<div class="col_1">
-                        <div id="title_bottom"><p><a href="home.html"><img src="layout/images/spacer.gif" alt="WebSplash" title="WebSplash" /></a></p></div>
+                        <div id="title_bottom"><p><a href="${pageContext.request.contextPath}/home_page"><img src="layout/images/spacer.gif" alt="WebSplash" title="WebSplash" /></a></p></div>
                         
                         <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration some form, by injected  randomised words which don't look even slightly If you are going to use... <a href="#"><img src="layout/images/arrow_6.gif" alt="" /></a></p>
                     </div>
