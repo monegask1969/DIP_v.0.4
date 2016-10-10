@@ -21,7 +21,7 @@ public class DogShowDAOImpl implements DogShowDAO{
     @Override
     public Dogshow getById(int id) {
         Session session = HibernateUtil.getSessionFactory().openSession();
-        Dogshow dogshow = (Dogshow)session.createCriteria(Dogs.class)
+        Dogshow dogshow = (Dogshow)session.createCriteria(Dogshow.class)
                 .add(Restrictions.eq("id", id)).uniqueResult();
         session.close();
         return dogshow;
@@ -30,7 +30,7 @@ public class DogShowDAOImpl implements DogShowDAO{
     @Override
     public Dogshow getByTitle(String title) {
          Session session = HibernateUtil.getSessionFactory().openSession();
-        Dogshow dogshow = (Dogshow)session.createCriteria(Dogs.class)
+        Dogshow dogshow = (Dogshow)session.createCriteria(Dogshow.class)
                 .add(Restrictions.eq("title", title)).uniqueResult();
         session.close();
         return dogshow;
@@ -39,7 +39,7 @@ public class DogShowDAOImpl implements DogShowDAO{
     @Override
     public Dogshow getByDate(Date date) {
          Session session = HibernateUtil.getSessionFactory().openSession();
-        Dogshow dogshow = (Dogshow)session.createCriteria(Dogs.class)
+        Dogshow dogshow = (Dogshow)session.createCriteria(Dogshow.class)
                 .add(Restrictions.eq("date", date)).uniqueResult();
         session.close();
         return dogshow;
@@ -48,7 +48,7 @@ public class DogShowDAOImpl implements DogShowDAO{
     @Override
     public Dogshow getBySponsor(String sponsor) {
          Session session = HibernateUtil.getSessionFactory().openSession();
-        Dogshow dogshow = (Dogshow)session.createCriteria(Dogs.class)
+        Dogshow dogshow = (Dogshow)session.createCriteria(Dogshow.class)
                 .add(Restrictions.eq("sponsor", sponsor)).uniqueResult();
         session.close();
         return dogshow;
@@ -57,7 +57,7 @@ public class DogShowDAOImpl implements DogShowDAO{
     @Override
     public Dogshow getByPicture(Blob picture) {
          Session session = HibernateUtil.getSessionFactory().openSession();
-        Dogshow dogshow = (Dogshow)session.createCriteria(Dogs.class)
+        Dogshow dogshow = (Dogshow)session.createCriteria(Dogshow.class)
                 .add(Restrictions.eq("picture", picture)).uniqueResult();
         session.close();
         return dogshow;
@@ -66,7 +66,7 @@ public class DogShowDAOImpl implements DogShowDAO{
     @Override
     public Dogshow getByDescription(String description) {
          Session session = HibernateUtil.getSessionFactory().openSession();
-        Dogshow dogshow = (Dogshow)session.createCriteria(Dogs.class)
+        Dogshow dogshow = (Dogshow)session.createCriteria(Dogshow.class)
                 .add(Restrictions.eq("description", description)).uniqueResult();
         session.close();
         return dogshow;
@@ -75,7 +75,7 @@ public class DogShowDAOImpl implements DogShowDAO{
     @Override
     public Dogshow getByAdress(String adress) {
          Session session = HibernateUtil.getSessionFactory().openSession();
-        Dogshow dogshow = (Dogshow)session.createCriteria(Dogs.class)
+        Dogshow dogshow = (Dogshow)session.createCriteria(Dogshow.class)
                 .add(Restrictions.eq("adress", adress)).uniqueResult();
         session.close();
         return dogshow;
@@ -84,8 +84,17 @@ public class DogShowDAOImpl implements DogShowDAO{
     @Override
     public List<Dogshow> getList() {
         Session session = HibernateUtil.getSessionFactory().openSession();
-        Criteria crit = session.createCriteria(Dogs.class); 
+        Criteria crit = session.createCriteria(Dogshow.class); 
         List<Dogshow> dogshow = (List<Dogshow>)crit.list();
+        session.close();
+        return dogshow;
+    }
+
+    @Override
+    public Dogshow getByOrganizer(String organizer) {
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        Dogshow dogshow = (Dogshow)session.createCriteria(Dogshow.class)
+                .add(Restrictions.eq("organizer", organizer)).uniqueResult();
         session.close();
         return dogshow;
     }

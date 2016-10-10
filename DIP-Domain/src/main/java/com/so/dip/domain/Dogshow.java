@@ -35,7 +35,8 @@ import javax.xml.bind.annotation.XmlRootElement;
     @NamedQuery(name = "Dogshow.findByDate", query = "SELECT d FROM Dogshow d WHERE d.date = :date"),
     @NamedQuery(name = "Dogshow.findBySponsor", query = "SELECT d FROM Dogshow d WHERE d.sponsor = :sponsor"),
     @NamedQuery(name = "Dogshow.findByDescription", query = "SELECT d FROM Dogshow d WHERE d.description = :description"),
-    @NamedQuery(name = "Dogshow.findByAddress", query = "SELECT d FROM Dogshow d WHERE d.address = :address")})
+    @NamedQuery(name = "Dogshow.findByAddress", query = "SELECT d FROM Dogshow d WHERE d.address = :address"),
+    @NamedQuery(name = "Dogshow.findByOrganizer", query = "SELECT d FROM Dogshow d WHERE d.organizer = :organizer")})
 public class Dogshow implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -64,6 +65,9 @@ public class Dogshow implements Serializable {
     @Basic(optional = false)
     @Column(name = "address")
     private String address;
+    @Basic(optional = false)
+    @Column(name = "organizer")
+    private String organizer;
 
     public Dogshow() {
     }
@@ -72,7 +76,7 @@ public class Dogshow implements Serializable {
         this.id = id;
     }
 
-    public Dogshow(Integer id, String title, Date date, String sponsor, byte[] picture, String description, String address) {
+    public Dogshow(Integer id, String title, Date date, String sponsor, byte[] picture, String description, String address, String organizer) {
         this.id = id;
         this.title = title;
         this.date = date;
@@ -80,6 +84,7 @@ public class Dogshow implements Serializable {
         this.picture = picture;
         this.description = description;
         this.address = address;
+        this.organizer = organizer;
     }
 
     public Integer getId() {
@@ -136,6 +141,14 @@ public class Dogshow implements Serializable {
 
     public void setAddress(String address) {
         this.address = address;
+    }
+
+    public String getOrganizer() {
+        return organizer;
+    }
+
+    public void setOrganizer(String organizer) {
+        this.organizer = organizer;
     }
 
     @Override

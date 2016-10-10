@@ -118,26 +118,54 @@
 			
 				<div class="column_14 separated_border_right_24 mt_5 fl">
                                 <div class="separator_1"></div>
-                                                    <c:forEach var="dsh" items="${dogshow}">
-                                                        <div class="block_blog_type_5">
-                                                        <div class="title">
-                                                            <div class="date">
-                                                                <p id="dsh_${dsh.id}">${dsh.date}</p>
-                                                            </div> 
-                                                                <h1><a href="${pageContext.request.contextPath}/dogshowdetails" id="dsh_${dsh.id}">${dsh.title}</a></h1>
-                                                        <div class="blog_info">	
-								<div class="blog_info_by"><span>Sponsor</span> <a href="#">${dsh.sponsor}</a></div>
-							</div>
-                                                        </div>
-                                                        <div class="block_general_pic"><a href="ПЕРЕХОД НА ДРУГУЮ ЖСП"><img src="${dsh.picture}" class="r_conner_pic" alt="" /></a></div>
-                                                                <div class="blog_content">
-                                                                    <p>${dsh.description}<a href="ВСТАВИТЬ ССЫЛКУ НА ПЕРЕХОД ЖСП" class="arr_d"><img src="ВСТАВИТЬ КАРТИНКУ" alt="" /></a></p>
-                                                                    <p class="text_w_space_5"><a href="/views/dogs/dogshowdetails/{id}" class="lnk_w_arrow_general">Read more</a></p>
-                                                                </div>
-                                                        </div>
-                                                        <div class="line_1 w_lnk"></div>
-                                                        <div class="separator_1"></div>
-                                                        
+                                                    <c:forEach var="dsh" items="/dogshowdetails/{id}">
+                                                        <div class="column_14 separated_border_right_24 mt_5 fl">
+					<div class="block_blog_post">
+						<div class="block_general_pic"><img src="${dsh.picture}" class="r_conner_pic" alt="" /></div>
+						<div class="post_info">
+							<p><span>Organizer:</span><a>${dsh.organizer}</a></p>
+							<p><span>Date:</span>${dsh.date}</p>
+						</div>
+						<div class="post_content">
+							<h1>${dsh.title}</h1>
+							<p>${dsh.description}</p>
+							<p>&nbsp;</p>
+							<p>Sponsor of this Dog Show is</p>
+							<p>${dsh.sponsor}</p>
+							<p>&nbsp;</p>
+							<p>Location:</p>
+							<p>${dsh.adress}</p>
+							<p>&nbsp;</p>
+							<div class="separator_9"></div>
+							<div class="line_1"></div>
+						</div>
+					</div>
+					<div class="separator_15"></div>
+					<div class="block_add_comment" id="leave_comment">
+						<div class="title">
+							<h1>Write to us</h1>
+							<p>If you found something to change, write us, please!</p>
+						</div>
+                                            <!--СДЕЛАТЬ ФИДБЭК !!!--> 
+						<div class="comment_form">
+							<form action="" id="cont_form" method="post">
+								<p>Name<span>*</span></p>
+								<div class="field">
+									<input type="text" class="w_focus" />
+								</div>
+								<p>E-mail<span>*</span></p>
+								<div class="field">
+									<input type="text" class="w_focus" />
+								</div>
+								<p>Message</p>
+								<div class="textarea">
+									<textarea cols="1" rows="1" class="w_focus"></textarea>
+								</div>
+								<div class="send"><a href="javascript:;" onclick="document.forms['cont_form'].submit();" class="button_lnk blue def_link"><span>Add Comment</span></a></div>
+							</form>
+						</div>
+					</div>
+				</div>
                                                     </c:forEach>
                                                         <div class="separator_1"></div>
                                                         <div class="line_1 w_lnk"></div>

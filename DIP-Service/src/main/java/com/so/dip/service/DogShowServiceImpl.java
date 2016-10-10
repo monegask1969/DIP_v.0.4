@@ -140,5 +140,20 @@ public class DogShowServiceImpl implements DogShowService{
         }
         return d;
     }
+
+    @Override
+    public Dogshow getByOrganizer(String organizer) {
+        Dogshow d = null;
+        try{
+            d = dogshowDao.getByOrganizer(organizer);
+            if(d == null){
+                throw new ODEException("such dog show is not exist");
+            }
+        }catch(ODEException ex){
+            System.out.println("write log - dog show does not exist");
+            throw ex;
+        }
+        return d;
+    }
     
 }

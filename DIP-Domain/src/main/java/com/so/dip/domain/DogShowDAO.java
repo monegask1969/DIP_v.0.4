@@ -21,5 +21,6 @@ public interface DogShowDAO {
     Dogshow getByPicture(Blob picture);
     Dogshow getByDescription(String description);
     Dogshow getByAdress(String adress);
+    Dogshow getByOrganizer(String organizer);
     List<Dogshow> getList();
 }

@@ -5,7 +5,9 @@
  */
 package com.so.dip.web;
 
-import com.so.dip.service.UsersService;
+import com.so.dip.domain.Dogshow;
+import com.so.dip.service.DogShowService;
+import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,15 +19,19 @@ import org.springframework.web.servlet.ModelAndView;
  * @author moneg
  */
 @Controller
-public class HomePageController {
-        @Autowired
-    UsersService usersService;
+public class DogShowDetailsController {
+    @Autowired
+    DogShowService dogShowService;
     
-    
-    @RequestMapping(value = {"/","/home_page"}, method = {RequestMethod.GET})
-    public ModelAndView getHomePage(){
+    @RequestMapping(value = {"/dogshowdetails"}, method = {RequestMethod.GET})
+    public ModelAndView getDogShow(){
+        System.out.println("DOGSHOW");
         ModelAndView mv = new ModelAndView();
-        mv.setViewName("dogs/home_page");
+        System.out.println("getting dogshow list");
+        List<Dogshow> dList = dogShowService.getList();
+        mv.setViewName("dogs/dogshow");
+        mv.addObject("dogshow", dList);
+        System.out.println(dList);
         return mv;
     }
 }

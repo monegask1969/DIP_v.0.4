@@ -5,11 +5,13 @@
  */
 package com.so.dip.web;
 
+
 import com.so.dip.domain.Dogshow;
 import com.so.dip.service.DogShowService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
@@ -26,13 +28,34 @@ public class DogShowController {
                 @RequestMapping(value = {"/dogshow"}, method = {RequestMethod.GET})
     public ModelAndView getDogShow(){
         ModelAndView mv = new ModelAndView();
-        List<Dogshow> dshList = dogShowService.getList();
-//        mv.setViewName("dogs/dogs_table");
-System.out.println("DOGSHOW");
+        List<Dogshow> dList = dogShowService.getList();
         mv.setViewName("dogs/dogshow");
-        mv.addObject("dogshow", dshList);
-        System.out.println(dshList);
+        mv.addObject("dogshow",dList);
+        System.out.println(dList);
         return mv;
     }
+ 
     
+    @RequestMapping(value = "/views/dogs/dogshowdetails/{id}", method = {RequestMethod.GET})
+    public void getDogShowDetails(@PathVariable int id){
+        System.out.println("DOGSHOW");
+        ModelAndView mv = new ModelAndView();
+        System.out.println("getting dogshow list");
+        List<Dogshow> dList = dogShowService.getList();
+        mv.setViewName("dogs/dogshowdetails");
+        mv.addObject("dogshowdet", dList.get(id));
+        System.out.println(dList);
+        getDogShoww(id);
+        
+    }
+       
+    public ModelAndView getDogShoww(int id){
+        System.out.println("dogshow instance");
+        ModelAndView mv = new ModelAndView();
+        List<Dogshow> dList = dogShowService.getList();
+        mv.setViewName("dogs/dogshowdetails");
+        mv.addObject("dogshowdet", dList.get(id));
+        
+        return mv;
+    }
 }

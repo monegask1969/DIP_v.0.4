@@ -12,6 +12,7 @@
     
     <mapping class="com.so.dip.domain.Users"/>
     <mapping class="com.so.dip.domain.Dogs"/>
+    <mapping class="com.so.dip.domain.Dogshow"/>
   </session-factory>
   
 </hibernate-configuration>
