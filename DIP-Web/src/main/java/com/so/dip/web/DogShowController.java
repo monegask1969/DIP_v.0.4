@@ -37,7 +37,7 @@ public class DogShowController {
  
     
     @RequestMapping(value = "/views/dogs/dogshowdetails/{id}", method = {RequestMethod.GET})
-    public void getDogShowDetails(@PathVariable int id){
+    public ModelAndView getDogShowDetails(@PathVariable("id") Integer id){
         System.out.println("DOGSHOW");
         ModelAndView mv = new ModelAndView();
         System.out.println("getting dogshow list");
@@ -45,17 +45,6 @@ public class DogShowController {
         mv.setViewName("dogs/dogshowdetails");
         mv.addObject("dogshowdet", dList.get(id));
         System.out.println(dList);
-        getDogShoww(id);
-        
-    }
-       
-    public ModelAndView getDogShoww(int id){
-        System.out.println("dogshow instance");
-        ModelAndView mv = new ModelAndView();
-        List<Dogshow> dList = dogShowService.getList();
-        mv.setViewName("dogs/dogshowdetails");
-        mv.addObject("dogshowdet", dList.get(id));
-        
         return mv;
     }
 }

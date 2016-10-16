@@ -118,7 +118,7 @@
 			
 				<div class="column_14 separated_border_right_24 mt_5 fl">
                                 <div class="separator_1"></div>
-                                                    <c:forEach var="dsh" items="/dogshowdetails/{id}">
+                                                    <c:forEach var="dsh" items="dogshowdet">
                                                         <div class="column_14 separated_border_right_24 mt_5 fl">
 					<div class="block_blog_post">
 						<div class="block_general_pic"><img src="${dsh.picture}" class="r_conner_pic" alt="" /></div>
