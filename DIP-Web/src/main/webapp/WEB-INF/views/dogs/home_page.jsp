@@ -75,6 +75,7 @@
 						<li class="active"><a href="${pageContext.request.contextPath}/home_page">Home</a></li>
                                                 <li><a href="${pageContext.request.contextPath}/dogshow">Dog Show</a></li>
 						<li><a href="${pageContext.request.contextPath}/about">About</a></li>
+						<li><a href="${pageContext.request.contextPath}/createdogpage">Create Dog</a></li>
 						<li><a href="contact.php">Contact</a></li>
 					</ul>
 				</div>

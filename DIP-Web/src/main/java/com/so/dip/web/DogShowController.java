@@ -36,7 +36,7 @@ public class DogShowController {
     }
  
     
-    @RequestMapping(value = "/views/dogs/dogshowdetails/{id}", method = {RequestMethod.GET})
+    @RequestMapping(value = "/views/dogs/dogshowdetails/${id}", method = {RequestMethod.GET})
     public ModelAndView getDogShowDetails(@PathVariable("id") Integer id){
         System.out.println("DOGSHOW");
         ModelAndView mv = new ModelAndView();

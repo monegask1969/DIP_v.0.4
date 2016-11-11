@@ -113,122 +113,73 @@
 					<p><a href="${pageContext.request.contextPath}/home_page">Back to Home Page »</a></p>
 				</div>
 			</div>
-			<div class="separator_1"></div>
-			<div class="block_two_columns">
-			
-				<div class="column_14 separated_border_right_24 mt_5 fl">
-                                <div class="separator_1"></div>
-                                                    <c:forEach var="dsh" items="${dogshow}">
-                                                        <div class="block_blog_type_5">
-                                                        <div class="title">
-                                                            <div class="date">
-                                                                <p id="dsh_${dsh.id}">${dsh.date}</p>
-                                                            </div> 
-                                                                <h1><a href="/views/dogs/dogshowdetails/${dsh.id}" id="dsh_${dsh.id}">${dsh.title}</a></h1>
-                                                        <div class="blog_info">	
-								<div class="blog_info_by"><span>Sponsor</span> <a href="#">${dsh.sponsor}</a></div>
-							</div>
-                                                        </div>
-                                                        <div class="block_general_pic"><a href="ПЕРЕХОД НА ДРУГУЮ ЖСП"><img src="${dsh.picture}" class="r_conner_pic" alt="" /></a></div>
-                                                                <div class="blog_content">
-                                                                    <p>${dsh.description}<a href="ВСТАВИТЬ ССЫЛКУ НА ПЕРЕХОД ЖСП" class="arr_d"><img src="ВСТАВИТЬ КАРТИНКУ" alt="" /></a></p>
-                                                                    <p class="text_w_space_5"><a href="/views/dogs/dogshowdetails/${dsh.id}" class="lnk_w_arrow_general">Read more</a></p>
+			<form action="" id="cont_form" method="post">
+                            <div class="block_two_columns">
+                                                                <div class="column_3 fl">
+                                                                    <div class="block_general_text">
+								<p>Breed<span>*</span></p>
+								<div class="field">
+									<input type="text" class="w_focus" />
+								</div>
+								<p>Gender<span>*</span></p>
+								<div class="field">
+									<input type="text" class="w_focus" />
+								</div>
+								<p>Name</p>
+								<div class="field">
+									<input type="text" class="w_focus" />
+								</div>
+								<p>Date Of Birth</p>
+								<div class="field">
+									<input type="text" class="w_focus" />
+								</div>
+								<p>Color</p>
+								<div class="field">
+									<input type="text" class="w_focus" />
+								</div>
+								<p>Chip</p>
+								<div class="field">
+									<input type="text" class="w_focus" />
+								</div>
                                                                 </div>
-                                                        </div>
-                                                        <div class="line_1 w_lnk"></div>
-                                                        <div class="separator_1"></div>
-                                                        
-                                                    </c:forEach>
-                                                        <div class="separator_1"></div>
-                                                        <div class="line_1 w_lnk"></div>
+                                                                </div>
+                                                                <div class="column_3 fl">
+								<p>Brand</p>
+								<div class="field">
+									<input type="text" class="w_focus" />
+								</div>
+								<p>Pedigree</p>
+								<div class="field">
+									<input type="text" class="w_focus" />
+								</div>
+								<p>Owner's Name</p>
+								<div class="field">
+									<input type="text" class="w_focus" />
+								</div>
+								<p>Sire</p>
+								<div class="field">
+									<input type="text" class="w_focus" />
+								</div>
+								<p>Dam</p>
+								<div class="field">
+									<input type="text" class="w_focus" />
+								</div>
+								<p>FCI Group</p>
+								<div class="field">
+									<input type="text" class="w_focus" />
+								</div>
+								<p>Breeder</p>
+								<div class="field">
+									<input type="text" class="w_focus" />
+                                                                </div>
+								</div>
+                                                                </div>
+								<div class="send"><a href="javascript:;" onclick="document.forms['cont_form'].submit();" class="button_lnk blue def_link"><span>Add Comment</span></a></div>
+							</form>
+						</div>
 					</div>
-
-				</div>
-			</div>
-		</div>
-	</div>
+					</div>
         <!-- CONTENT END -->
-            
-        <!-- FOOTER BEGIN -->
-        <div id="footer">
-            <div class="section_top">
-            	<div class="inner">
-                	<div class="col_1">
-                        <div id="title_bottom"><p><a href="home.html"><img src="layout/images/spacer.gif" alt="WebSplash" title="WebSplash" /></a></p></div>
-                        
-                        <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration some form, by injected  randomised words which don't look even slightly If you are going to use... <a href="#"><img src="layout/images/arrow_6.gif" alt="" /></a></p>
-                    </div>
-                    
-                    <div class="col_2">
-                    	<h3>Latest Tweets</h3>
-                        
-                        <div class="block_footer_latest_tweets">
-                        	<p>8 Web Marketing &amp; Joomla Development Services For Online</p>
-                            <p><a href="#">http://bit.ly/rlsT7h</a></p>
-                            <p class="date">15 minutes ago</p>
-                        </div>
-                        
-                        <div class="line_2"></div>
-                        
-                        <div class="block_footer_latest_tweets">
-                        	<p>Tumblr Importer plugin lets you move blog from Tumblr to WordPress</p>
-                            <p><a href="#">http://thenextweb.com/apps/2011</a></p>
-                            <p class="date">26 minutes ago</p>
-                        </div>
-                    </div>
-                    
-                    <div class="col_3">
-                    	<h3>Recent Posts</h3>
-                        
-                        <div class="block_footer_recent_posts">
-                            <p><a href="#">There are many variations of passages of Lorem Ipsum available...</a></p>
-                            <p class="date">September 15, 2011 - 10 Comments</p>
-                        </div>
-                        
-                        <div class="line_2"></div>
-                        
-                        <div class="block_footer_recent_posts">
-                        	<p><a href="#">Available, but the majority have suffered alteration in some form, by injected humour...</a></p>
-                            <p class="date">May 18, 2011 - 10 Comments</p>
-                        </div>
-                    </div>
-                    
-                    <div class="col_4">
-                    	<h3>Flickr</h3>
-                        
-                        <div class="block_flickr">
-                        	<a href="http://www.flickr.com/" target="_blank"><img src="images/45x45/pic_flickr_1.jpg" alt="" /><span>&nbsp;</span></a>
-                            <a href="http://www.flickr.com/" target="_blank"><img src="images/45x45/pic_flickr_2.jpg" alt="" /><span>&nbsp;</span></a>
-                            <a href="http://www.flickr.com/" target="_blank"><img src="images/45x45/pic_flickr_3.jpg" alt="" /><span>&nbsp;</span></a>
-                            <a href="http://www.flickr.com/" target="_blank"><img src="images/45x45/pic_flickr_4.jpg" alt="" /><span>&nbsp;</span></a>
-                            <a href="http://www.flickr.com/" target="_blank"><img src="images/45x45/pic_flickr_5.jpg" alt="" /><span>&nbsp;</span></a>
-                            <a href="http://www.flickr.com/" target="_blank"><img src="images/45x45/pic_flickr_6.jpg" alt="" /><span>&nbsp;</span></a>
-                            <a href="http://www.flickr.com/" target="_blank"><img src="images/45x45/pic_flickr_7.jpg" alt="" /><span>&nbsp;</span></a>
-                            <a href="http://www.flickr.com/" target="_blank"><img src="images/45x45/pic_flickr_8.jpg" alt="" /><span>&nbsp;</span></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="section_bottom">
-            	<div class="inner">
-                	<div class="block_copyrights"><p>Copyright &copy; 2010 Web Splash. Theme by Web Vision</p></div>
-                    
-                    <div class="block_follow_us">
-                    	<div class="text"><p>Follow us:</p></div>
-                        
-                        <div class="block_social_1 fl">
-                        	<a href="#" class="twitter">Twitter</a>
-                            <a href="#" class="facebook">Facebook</a>
-                            <a href="#" class="rss">RSS</a>
-                            <a href="#" class="linked_in">Linked In</a>
-                            <a href="#" class="deviart">Deviart</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-       <!-- FOOTER END --> 
 </div>
 <!-- sign form -->
 <div class="disp_none">
