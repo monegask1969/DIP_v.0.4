@@ -5,7 +5,6 @@
  */
 package com.so.dip.web;
 
-import com.so.dip.service.DogsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -18,8 +17,8 @@ import org.springframework.web.servlet.ModelAndView;
  */
 @Controller
 public class CreateDogController {
-    @Autowired
-    DogsService dogsService;
+//    @Autowired
+//    DogsService dogsService;
     
     @RequestMapping(value = {"/createdogpage"}, method = {RequestMethod.GET})
     public ModelAndView goToPage(){

@@ -1,8 +1,5 @@
 package com.so.dip.web;
 
-import com.so.dip.domain.Dogs;
-import com.so.dip.domain.Users;
-import com.so.dip.service.DogsService;
 import com.so.dip.service.UsersService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;

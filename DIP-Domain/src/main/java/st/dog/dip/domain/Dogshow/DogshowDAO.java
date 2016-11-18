@@ -3,9 +3,8 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.so.dip.domain;
+package st.dog.dip.domain.Dogshow;
 
-import java.sql.Blob;
 import java.util.Date;
 import java.util.List;
 
@@ -13,14 +12,13 @@ import java.util.List;
  *
  * @author moneg
  */
-public interface DogShowDAO {
+public interface DogshowDAO {
     Dogshow getById(int id);
     Dogshow getByTitle(String title);
     Dogshow getByDate(Date date);
     Dogshow getBySponsor(String sponsor);
-    Dogshow getByPicture(Blob picture);
     Dogshow getByDescription(String description);
-    Dogshow getByAdress(String adress);
+    Dogshow getByAddress(String address);
     Dogshow getByOrganizer(String organizer);
     List<Dogshow> getList();
 }

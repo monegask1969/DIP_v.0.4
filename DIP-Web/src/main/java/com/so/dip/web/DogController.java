@@ -1,9 +1,5 @@
 package com.so.dip.web;
 
-import com.so.dip.domain.Dogs;
-import com.so.dip.domain.DogsDAOImpl;
-import com.so.dip.service.DogsService;
-import com.so.dip.service.DogsServiceImpl;
 import java.util.Date;
 
 import java.util.List;
@@ -28,8 +24,8 @@ import org.springframework.web.servlet.ModelAndView;
  */
 @Controller
 public class DogController {
-    @Autowired
-    DogsService dogsService;
+//    @Autowired
+//    DogsService dogsService;
     
     
 //    @RequestMapping(value = {"/dogs"}, method = {RequestMethod.GET})

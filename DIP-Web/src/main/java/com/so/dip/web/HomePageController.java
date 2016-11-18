@@ -18,8 +18,6 @@ import org.springframework.web.servlet.ModelAndView;
  */
 @Controller
 public class HomePageController {
-        @Autowired
-    UsersService usersService;
     
     
     @RequestMapping(value = {"/","/home_page"}, method = {RequestMethod.GET})

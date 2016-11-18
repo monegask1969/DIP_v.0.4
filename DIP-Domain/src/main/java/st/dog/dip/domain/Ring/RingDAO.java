@@ -3,13 +3,18 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.so.dip.domain;
+package st.dog.dip.domain.Ring;
+
+import java.util.List;
 
 /**
  *
  * @author moneg
  */
-public interface DogsRepository extends JpaRepository<Dogs,Long>{
-    @Query("Select d Dogs d FROM Dogs Where name:=bla ")
-    Dogs findByName( @Parametr(name="bla")int id);
+public interface RingDAO {
+    Ring getById(int id);
+    Ring getByDogShow(int dogshow_id);
+    Ring getByTitle(String title);
+    List<Ring> getList();
+    
 }

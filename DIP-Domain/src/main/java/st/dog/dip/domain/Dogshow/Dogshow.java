@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.so.dip.domain;
+package st.dog.dip.domain.Dogshow;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -173,7 +173,7 @@ public class Dogshow implements Serializable {
 
     @Override
     public String toString() {
-        return "com.so.dip.domain.Dogshow[ id=" + id + " ]";
+        return "st.dog.dip.domain.Dogshow[ id=" + id + " ]";
     }
     
 }

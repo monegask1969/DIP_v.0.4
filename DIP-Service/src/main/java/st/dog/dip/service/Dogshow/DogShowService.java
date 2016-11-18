@@ -3,12 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.so.dip.service;
+package st.dog.dip.service.Dogshow;
 
-import com.so.dip.domain.Dogshow;
-import java.sql.Blob;
 import java.util.Date;
 import java.util.List;
+import st.dog.dip.domain.Dogshow.Dogshow;
 
 /**
  *
@@ -19,9 +18,8 @@ public interface DogShowService {
     Dogshow getByTitle(String title);
     Dogshow getByDate(Date date);
     Dogshow getBySponsor(String sponsor);
-    Dogshow getByPicture(Blob picture);
     Dogshow getByDescription(String description);
-    Dogshow getByAdress(String adress);
+    Dogshow getByAddress(String address);
     Dogshow getByOrganizer(String organizer);
     List<Dogshow> getList();
 }
