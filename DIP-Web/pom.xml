@@ -31,7 +31,7 @@
             <artifactId>DIP-Service</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
-        <dependency>
+<!--         <dependency>
             <groupId>com.so.DIP</groupId>
             <artifactId>DIP-Domain</artifactId>
             <version>1.0-SNAPSHOT</version>
@@ -42,7 +42,7 @@
             <artifactId>DIP-Domain</artifactId>
             <version>1.0-SNAPSHOT</version>
             <type>jar</type>
-        </dependency>
+        </dependency> -->
         <dependency>
             <groupId>javax</groupId>
             <artifactId>javaee-web-api</artifactId>
@@ -85,9 +85,9 @@
             <version>3.2.4.RELEASE</version>
         </dependency>
         <dependency>
-    <groupId>org.json</groupId>
-    <artifactId>json</artifactId>
-    <version>20160212</version>
+	    <groupId>org.json</groupId>
+	    <artifactId>json</artifactId>
+	    <version>20160212</version>
         </dependency>
     </dependencies>
 
